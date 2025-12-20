@@ -1003,3 +1003,368 @@ NoneType: None
 2025-12-20 11:19:57,094 - retrieval_pipeline - INFO - All retrieval results passed validation checks
 2025-12-20 11:19:57,094 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
 2025-12-20 11:19:57,094 - retrieval_pipeline - INFO - Retrieval completed in 0.40ms, found 0 results
+2025-12-20 11:37:02,951 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:37:03,379 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:37:03,379 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:37:03,379 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain the publisher subscriber pattern in ROS 2' with k=5, threshold=0.3
+2025-12-20 11:37:03,379 - retrieval_pipeline - INFO - Preprocessed query: 'Explain the publisher subscriber pattern in ROS 2' (original length: 49, processed length: 49)
+2025-12-20 11:37:03,668 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:37:03,669 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:37:03,669 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:37:03,847 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 11:37:03,848 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 11:37:03,848 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 11:37:03,849 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 11:37:03,849 - retrieval_pipeline - INFO - Retrieval completed in 0.47ms, found 5 results
+2025-12-20 11:40:00,341 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:40:00,781 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:40:00,782 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:40:00,782 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain the publisher subscriber pattern in ROS 2' with k=5, threshold=0.3
+2025-12-20 11:40:00,783 - retrieval_pipeline - INFO - Preprocessed query: 'Explain the publisher subscriber pattern in ROS 2' (original length: 49, processed length: 49)
+2025-12-20 11:40:01,063 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:40:01,064 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:40:01,064 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:40:01,271 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 11:40:01,272 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 11:40:01,273 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 11:40:01,273 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 11:40:01,273 - retrieval_pipeline - INFO - Retrieval completed in 0.49ms, found 5 results
+2025-12-20 11:40:43,641 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:40:44,034 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:40:44,034 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:40:44,035 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is the capital of France?' with k=5, threshold=0.3
+2025-12-20 11:40:44,035 - retrieval_pipeline - INFO - Preprocessed query: 'What is the capital of France?' (original length: 30, processed length: 30)
+2025-12-20 11:40:44,304 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:40:44,305 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:40:44,305 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:40:44,450 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 11:40:44,451 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 11:40:44,451 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 11:40:44,452 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.3
+2025-12-20 11:40:44,452 - retrieval_pipeline - INFO - Retrieval completed in 0.42ms, found 0 results
+2025-12-20 11:43:49,365 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:43:49,759 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:43:49,759 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:43:49,760 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain publisher subscriber pattern in ROS 2' with k=5, threshold=0.3
+2025-12-20 11:43:49,760 - retrieval_pipeline - INFO - Preprocessed query: 'Explain publisher subscriber pattern in ROS 2' (original length: 45, processed length: 45)
+2025-12-20 11:43:50,672 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:43:50,673 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:43:50,673 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:43:50,836 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 11:43:50,838 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 11:43:50,839 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 11:43:50,839 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 11:43:50,840 - retrieval_pipeline - INFO - Retrieval completed in 1.08ms, found 5 results
+2025-12-20 11:44:25,011 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:44:25,421 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:44:25,422 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:44:25,423 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain VSLAM and perception pipelines' with k=5, threshold=0.3
+2025-12-20 11:44:25,424 - retrieval_pipeline - INFO - Preprocessed query: 'Explain VSLAM and perception pipelines' (original length: 38, processed length: 38)
+2025-12-20 11:44:25,950 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:44:25,950 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:44:25,951 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:44:26,115 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 11:44:26,116 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 11:44:26,117 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 11:44:26,118 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.3
+2025-12-20 11:44:26,119 - retrieval_pipeline - INFO - Retrieval completed in 0.70ms, found 0 results
+2025-12-20 11:44:54,782 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:44:55,232 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:44:55,232 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:44:55,233 - retrieval_pipeline - INFO - Starting retrieval for query: 'What are ROS nodes and topics?' with k=5, threshold=0.3
+2025-12-20 11:44:55,233 - retrieval_pipeline - INFO - Preprocessed query: 'What are ROS nodes and topics?' (original length: 30, processed length: 30)
+2025-12-20 11:44:55,565 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:44:55,566 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:44:55,566 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:44:55,738 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 11:44:55,739 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 11:44:55,740 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 11:44:55,741 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 11:44:55,742 - retrieval_pipeline - INFO - Retrieval completed in 0.51ms, found 5 results
+2025-12-20 11:57:05,596 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:57:05,996 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:57:05,997 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:57:05,997 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain the publisher subscriber pattern in ROS 2' with k=5, threshold=0.3
+2025-12-20 11:57:05,998 - retrieval_pipeline - INFO - Preprocessed query: 'Explain the publisher subscriber pattern in ROS 2' (original length: 49, processed length: 49)
+2025-12-20 11:57:06,275 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:57:06,275 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:57:06,275 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:57:06,432 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 11:57:06,433 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 11:57:06,433 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 11:57:06,434 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 11:57:06,434 - retrieval_pipeline - INFO - Retrieval completed in 0.44ms, found 5 results
+2025-12-20 11:57:08,910 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:57:09,323 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:57:09,323 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:58:51,473 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:58:51,913 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:58:51,913 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:58:51,914 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain the publisher subscriber pattern in ROS 2' with k=5, threshold=0.3
+2025-12-20 11:58:51,914 - retrieval_pipeline - INFO - Preprocessed query: 'Explain the publisher subscriber pattern in ROS 2' (original length: 49, processed length: 49)
+2025-12-20 11:58:52,205 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:58:52,206 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:58:52,206 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:58:52,369 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 11:58:52,370 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 11:58:52,371 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 11:58:52,371 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 11:58:52,371 - retrieval_pipeline - INFO - Retrieval completed in 0.46ms, found 5 results
+2025-12-20 11:58:54,981 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:58:55,435 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:58:55,436 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:59:39,076 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:59:39,527 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:59:39,527 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 11:59:39,527 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is the capital of France?' with k=5, threshold=0.3
+2025-12-20 11:59:39,528 - retrieval_pipeline - INFO - Preprocessed query: 'What is the capital of France?' (original length: 30, processed length: 30)
+2025-12-20 11:59:39,810 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:59:39,811 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 11:59:39,811 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 11:59:39,977 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 11:59:39,978 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 11:59:39,978 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 11:59:39,978 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.3
+2025-12-20 11:59:39,978 - retrieval_pipeline - INFO - Retrieval completed in 0.45ms, found 0 results
+2025-12-20 11:59:42,483 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 11:59:42,904 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 11:59:42,904 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:02:37,890 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:02:38,334 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:02:38,334 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:02:38,335 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS nodes, topics, and services' with k=5, threshold=0.3
+2025-12-20 12:02:38,335 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS nodes, topics, and services' (original length: 39, processed length: 39)
+2025-12-20 12:02:38,632 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:02:38,633 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:02:38,634 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 12:02:38,798 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 12:02:38,799 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 12:02:38,800 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 12:02:38,800 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 12:02:38,800 - retrieval_pipeline - INFO - Retrieval completed in 0.47ms, found 5 results
+2025-12-20 12:02:41,391 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:02:41,789 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:02:41,789 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:05:06,280 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:05:06,712 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:05:06,713 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:05:06,714 - retrieval_pipeline - INFO - Starting retrieval for query: 'What are ROS nodes and topics?' with k=5, threshold=0.3
+2025-12-20 12:05:06,715 - retrieval_pipeline - INFO - Preprocessed query: 'What are ROS nodes and topics?' (original length: 30, processed length: 30)
+2025-12-20 12:05:06,989 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:05:06,989 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:05:06,990 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.3
+2025-12-20 12:05:07,145 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 12:05:07,146 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 12:05:07,147 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 12:05:07,148 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 12:05:07,149 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 5 results
+2025-12-20 12:05:09,477 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:05:09,887 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:05:09,887 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:21:56,850 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:21:57,551 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:21:57,551 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:21:57,551 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is physical AI?' with k=5, threshold=0.6
+2025-12-20 12:21:57,551 - retrieval_pipeline - INFO - Preprocessed query: 'What is physical AI?' (original length: 20, processed length: 20)
+2025-12-20 12:21:57,989 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:21:57,989 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:21:57,990 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:21:58,151 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:21:58,152 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:21:58,152 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:21:58,152 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:21:58,152 - retrieval_pipeline - INFO - Retrieval completed in 0.60ms, found 0 results
+2025-12-20 12:22:00,639 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:22:01,058 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:22:01,058 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:22:59,853 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:23:00,250 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:23:00,250 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:23:00,250 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is physical AI?' with k=5, threshold=0.6
+2025-12-20 12:23:00,250 - retrieval_pipeline - INFO - Preprocessed query: 'What is physical AI?' (original length: 20, processed length: 20)
+2025-12-20 12:23:00,532 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:23:00,533 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:23:00,533 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:23:00,678 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:23:00,678 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:23:00,678 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:23:00,678 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:23:00,679 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 0 results
+2025-12-20 12:24:00,228 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:24:00,650 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:24:00,651 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:24:00,651 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is the textbook about?' with k=5, threshold=0.6
+2025-12-20 12:24:00,652 - retrieval_pipeline - INFO - Preprocessed query: 'What is the textbook about?' (original length: 27, processed length: 27)
+2025-12-20 12:24:00,940 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:24:00,941 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:24:00,941 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:24:01,100 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:24:01,100 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:24:01,101 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:24:01,101 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:24:01,101 - retrieval_pipeline - INFO - Retrieval completed in 0.45ms, found 0 results
+2025-12-20 12:26:42,058 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:26:42,492 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:26:42,492 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:26:42,493 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:26:42,493 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:26:42,773 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:26:42,774 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:26:42,774 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:26:42,942 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:26:42,942 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:26:42,943 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:26:42,943 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:26:42,943 - retrieval_pipeline - INFO - Retrieval completed in 0.45ms, found 0 results
+2025-12-20 12:27:57,046 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:27:57,453 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:27:57,454 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:27:57,454 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:27:57,454 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:27:57,739 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:27:57,739 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:27:57,739 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:27:57,886 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:27:57,886 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:27:57,887 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:27:57,887 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:27:57,887 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 0 results
+2025-12-20 12:28:00,386 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:28:00,801 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:28:00,801 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:29:01,746 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:29:02,163 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:29:02,163 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:29:02,163 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:29:02,164 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:29:02,434 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:29:02,435 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:29:02,435 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:29:02,589 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:29:02,590 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:29:02,590 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:29:02,590 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:29:02,591 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 0 results
+2025-12-20 12:30:58,620 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:30:59,031 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:30:59,032 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:30:59,033 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain publisher subscriber pattern in ROS 2' with k=5, threshold=0.6
+2025-12-20 12:30:59,033 - retrieval_pipeline - INFO - Preprocessed query: 'Explain publisher subscriber pattern in ROS 2' (original length: 45, processed length: 45)
+2025-12-20 12:30:59,325 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:30:59,326 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:30:59,326 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:30:59,485 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:30:59,485 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:30:59,486 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:30:59,486 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:30:59,487 - retrieval_pipeline - INFO - Retrieval completed in 0.45ms, found 0 results
+2025-12-20 12:37:53,747 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:37:54,161 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:37:54,162 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:37:54,162 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:37:54,162 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:37:54,451 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:37:54,451 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:37:54,451 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:37:54,618 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:37:54,618 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:37:54,619 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:37:54,619 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:37:54,619 - retrieval_pipeline - INFO - Retrieval completed in 0.46ms, found 0 results
+2025-12-20 12:37:57,033 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:37:57,420 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:37:57,421 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:39:04,353 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:39:04,755 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:39:04,755 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:39:04,755 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:39:04,755 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:39:05,032 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:39:05,032 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:39:05,032 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:39:05,178 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:39:05,178 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:39:05,179 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:39:05,179 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:39:05,179 - retrieval_pipeline - INFO - Retrieval completed in 0.42ms, found 0 results
+2025-12-20 12:42:16,915 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:42:17,324 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:42:17,325 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:42:17,325 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:42:17,325 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:42:17,601 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:42:17,601 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:42:17,601 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:42:17,751 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:42:17,751 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:42:17,751 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:42:17,752 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:42:17,752 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 0 results
+2025-12-20 12:47:09,941 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:47:10,363 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:47:10,364 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:47:10,364 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is physical AI?' with k=5, threshold=0.6
+2025-12-20 12:47:10,365 - retrieval_pipeline - INFO - Preprocessed query: 'What is physical AI?' (original length: 20, processed length: 20)
+2025-12-20 12:47:10,638 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:47:10,638 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:47:10,638 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:47:10,805 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:47:10,805 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:47:10,805 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:47:10,806 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:47:10,806 - retrieval_pipeline - INFO - Retrieval completed in 0.44ms, found 0 results
+2025-12-20 12:48:16,545 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:48:16,951 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:48:16,952 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:48:16,952 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is physical AI?' with k=5, threshold=0.1
+2025-12-20 12:48:16,953 - retrieval_pipeline - INFO - Preprocessed query: 'What is physical AI?' (original length: 20, processed length: 20)
+2025-12-20 12:48:17,232 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:48:17,232 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:48:17,233 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.1
+2025-12-20 12:48:17,381 - retrieval_pipeline - INFO - Search completed successfully, returned 5 chunks from collection: textbook_embeddings
+2025-12-20 12:48:17,382 - retrieval_pipeline - INFO - Ranked 5 chunks by similarity score and diversity
+2025-12-20 12:48:17,382 - retrieval_pipeline - WARNING - Validation found 5 issues in retrieval results
+2025-12-20 12:48:17,382 - retrieval_pipeline - WARNING - Retrieved results had 5 validation issues
+2025-12-20 12:48:17,382 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 5 results
+2025-12-20 12:49:02,163 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:49:02,562 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:49:02,562 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:49:02,563 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:49:02,563 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:49:02,829 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:49:02,829 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:49:02,829 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:49:02,983 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:49:02,984 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:49:02,984 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:49:02,984 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:49:02,985 - retrieval_pipeline - INFO - Retrieval completed in 0.42ms, found 0 results
+2025-12-20 12:49:05,487 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:49:05,900 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:49:05,900 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:50:37,464 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:50:37,876 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:50:37,876 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:50:37,876 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:50:37,877 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:50:38,153 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:50:38,153 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:50:38,154 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:50:38,302 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:50:38,303 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:50:38,303 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:50:38,304 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:50:38,304 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 0 results
+2025-12-20 12:53:41,338 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:53:41,751 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:53:41,752 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 12:53:41,752 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is VSLAM?' with k=5, threshold=0.6
+2025-12-20 12:53:41,753 - retrieval_pipeline - INFO - Preprocessed query: 'What is VSLAM?' (original length: 14, processed length: 14)
+2025-12-20 12:53:42,045 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 12:53:42,045 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 12:53:42,046 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 12:53:42,189 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 12:53:42,190 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 12:53:42,191 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 12:53:42,192 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 12:53:42,193 - retrieval_pipeline - INFO - Retrieval completed in 0.44ms, found 0 results

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"specs/project-2-rag-chatbot/spec-4-chatbot-ui\")",
+      "Skill(sp.phr)",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"chatbot-ui-specification\" --stage spec --feature \"project-2-rag-chatbot\" --json)"
+    ]
+  }
+}

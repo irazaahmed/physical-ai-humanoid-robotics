@@ -6078,3 +6078,94 @@ AttributeError: 'QdrantClient' object has no attribute 'upsert_points'. Did you 
 2025-12-20 11:06:41,828 - rag_embeddings_pipeline - INFO - Final validation passed: {'count': 603, 'message': 'Storage validation passed'}
 2025-12-20 11:06:41,832 - rag_embeddings_pipeline - INFO - Embedding pipeline completed successfully!
 2025-12-20 11:09:18,444 - rag_embeddings_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 12:00:37,924 - rag_embeddings_pipeline - INFO - Qdrant collection already exists: textbook_embeddings
+2025-12-20 12:00:37,925 - rag_embeddings_pipeline - INFO - Fetching documentation URLs from sitemap...
+2025-12-20 12:00:37,926 - rag_embeddings_pipeline - INFO - Fetching sitemap from: https://physical-ai-humanoid-robotics-ar.netlify.app//sitemap.xml
+2025-12-20 12:00:39,282 - rag_embeddings_pipeline - INFO - Discovered 33 total URLs from sitemap
+2025-12-20 12:00:39,282 - rag_embeddings_pipeline - INFO - Filtered to 31 documentation URLs containing '/docs/'
+2025-12-20 12:00:39,282 - rag_embeddings_pipeline - INFO -   Example URL 1: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/intro
+2025-12-20 12:00:39,282 - rag_embeddings_pipeline - INFO -   Example URL 2: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/appendix-hardware-lite
+2025-12-20 12:00:39,282 - rag_embeddings_pipeline - INFO -   Example URL 3: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/intro
+2025-12-20 12:00:39,283 - rag_embeddings_pipeline - INFO -   Example URL 4: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/lab1-pubsub
+2025-12-20 12:00:39,283 - rag_embeddings_pipeline - INFO -   Example URL 5: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/lab2-controller
+2025-12-20 12:00:39,283 - rag_embeddings_pipeline - INFO -   ... and 26 more URLs
+2025-12-20 12:00:39,286 - rag_embeddings_pipeline - INFO - Filtered out 0 duplicate URLs
+2025-12-20 12:00:39,286 - rag_embeddings_pipeline - INFO - Starting pipeline for 31 unique documentation URLs
+2025-12-20 12:00:39,286 - rag_embeddings_pipeline - INFO - Starting pipeline for 31 URLs
+2025-12-20 12:00:39,286 - rag_embeddings_pipeline - INFO - Step 1: Crawling URLs...
+2025-12-20 12:00:39,286 - rag_embeddings_pipeline - INFO - Crawling 1/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/intro
+2025-12-20 12:00:41,090 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/intro
+2025-12-20 12:00:41,119 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/intro
+2025-12-20 12:00:41,119 - rag_embeddings_pipeline - INFO - Crawling 2/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/appendix-hardware-lite
+2025-12-20 12:00:41,736 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/appendix-hardware-lite
+2025-12-20 12:00:41,785 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/appendix-hardware-lite
+2025-12-20 12:00:41,785 - rag_embeddings_pipeline - INFO - Crawling 3/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/intro
+2025-12-20 12:00:42,379 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/intro
+2025-12-20 12:00:42,401 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/intro
+2025-12-20 12:00:42,401 - rag_embeddings_pipeline - INFO - Crawling 4/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/lab1-pubsub
+2025-12-20 12:00:43,176 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/lab1-pubsub
+2025-12-20 12:00:43,320 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/lab1-pubsub
+2025-12-20 12:00:43,320 - rag_embeddings_pipeline - INFO - Crawling 5/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/lab2-controller
+2025-12-20 12:00:44,308 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/lab2-controller
+2025-12-20 12:00:44,619 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/lab2-controller
+2025-12-20 12:00:44,620 - rag_embeddings_pipeline - INFO - Crawling 6/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/nodes-topics-services
+2025-12-20 12:00:45,446 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/nodes-topics-services
+2025-12-20 12:00:45,549 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/nodes-topics-services
+2025-12-20 12:00:45,550 - rag_embeddings_pipeline - INFO - Crawling 7/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/quiz
+2025-12-20 12:00:46,162 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/quiz
+2025-12-20 12:00:46,209 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/quiz
+2025-12-20 12:00:46,209 - rag_embeddings_pipeline - INFO - Crawling 8/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/rclpy-basics
+2025-12-20 12:00:46,943 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/rclpy-basics
+2025-12-20 12:00:47,089 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/rclpy-basics
+2025-12-20 12:00:47,089 - rag_embeddings_pipeline - INFO - Crawling 9/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/references
+2025-12-20 12:00:47,841 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/references
+2025-12-20 12:00:47,880 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/references
+2025-12-20 12:00:47,880 - rag_embeddings_pipeline - INFO - Crawling 10/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/ros-overview
+2025-12-20 12:00:48,651 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/ros-overview
+2025-12-20 12:00:48,697 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/ros-overview
+2025-12-20 12:00:48,697 - rag_embeddings_pipeline - INFO - Crawling 11/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/urdf-intro
+2025-12-20 12:00:49,448 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/urdf-intro
+2025-12-20 12:00:49,576 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module1/urdf-intro
+2025-12-20 12:00:49,576 - rag_embeddings_pipeline - INFO - Crawling 12/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/chapter-template
+2025-12-20 12:00:50,165 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/chapter-template
+2025-12-20 12:00:50,187 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/chapter-template
+2025-12-20 12:00:50,188 - rag_embeddings_pipeline - INFO - Crawling 13/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/gazebo-fundamentals
+2025-12-20 12:00:50,766 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/gazebo-fundamentals
+2025-12-20 12:00:50,819 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/gazebo-fundamentals
+2025-12-20 12:00:50,819 - rag_embeddings_pipeline - INFO - Crawling 14/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/intro
+2025-12-20 12:00:51,428 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/intro
+2025-12-20 12:00:51,446 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/intro
+2025-12-20 12:00:51,446 - rag_embeddings_pipeline - INFO - Crawling 15/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/physics-simulation
+2025-12-20 12:00:52,495 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/physics-simulation
+2025-12-20 12:00:52,572 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module2/physics-simulation
+2025-12-20 12:00:52,572 - rag_embeddings_pipeline - INFO - Crawling 16/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/chapter-template
+2025-12-20 12:00:53,129 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/chapter-template
+2025-12-20 12:00:53,156 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/chapter-template
+2025-12-20 12:00:53,156 - rag_embeddings_pipeline - INFO - Crawling 17/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/intro
+2025-12-20 12:00:53,955 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/intro
+2025-12-20 12:00:53,993 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/intro
+2025-12-20 12:00:53,994 - rag_embeddings_pipeline - INFO - Crawling 18/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/isaac-ros-hardware-acceleration
+2025-12-20 12:00:54,748 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/isaac-ros-hardware-acceleration
+2025-12-20 12:00:54,829 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/isaac-ros-hardware-acceleration
+2025-12-20 12:00:54,829 - rag_embeddings_pipeline - INFO - Crawling 19/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/isaac-sim-architecture
+2025-12-20 12:00:55,535 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/isaac-sim-architecture
+2025-12-20 12:00:55,576 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/isaac-sim-architecture
+2025-12-20 12:00:55,576 - rag_embeddings_pipeline - INFO - Crawling 20/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/navigation-nav2
+2025-12-20 12:00:56,348 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/navigation-nav2
+2025-12-20 12:00:56,426 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/navigation-nav2
+2025-12-20 12:00:56,427 - rag_embeddings_pipeline - INFO - Crawling 21/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/sim-to-real-transfer
+2025-12-20 12:00:57,340 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/sim-to-real-transfer
+2025-12-20 12:00:57,410 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/sim-to-real-transfer
+2025-12-20 12:00:57,410 - rag_embeddings_pipeline - INFO - Crawling 22/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/synthetic-data-generation
+2025-12-20 12:00:57,991 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/synthetic-data-generation
+2025-12-20 12:00:58,069 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/synthetic-data-generation
+2025-12-20 12:00:58,069 - rag_embeddings_pipeline - INFO - Crawling 23/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/vslam-perception-pipelines
+2025-12-20 12:00:58,825 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/vslam-perception-pipelines
+2025-12-20 12:00:58,918 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module3/vslam-perception-pipelines
+2025-12-20 12:00:58,918 - rag_embeddings_pipeline - INFO - Crawling 24/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module4/capstone-autonomous-humanoid
+2025-12-20 12:00:59,766 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module4/capstone-autonomous-humanoid
+2025-12-20 12:01:00,056 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module4/capstone-autonomous-humanoid
+2025-12-20 12:01:00,056 - rag_embeddings_pipeline - INFO - Crawling 25/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module4/error-handling-safety
+2025-12-20 12:01:00,922 - rag_embeddings_pipeline - INFO - Successfully fetched content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module4/error-handling-safety
+2025-12-20 12:01:01,143 - rag_embeddings_pipeline - INFO - Successfully extracted content from https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module4/error-handling-safety
+2025-12-20 12:01:01,143 - rag_embeddings_pipeline - INFO - Crawling 26/31: https://physical-ai-humanoid-robotics-ar.netlify.app/docs/module4/intro-vla
