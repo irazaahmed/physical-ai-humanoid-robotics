@@ -123,7 +123,8 @@ class EmbeddingPipeline:
                         'url': crawled['url'],
                         'chunk_index': chunk['chunk_index'],
                         'hash': chunk['hash'],
-                        'content_id': chunk['content_id']
+                        'content_id': chunk['content_id'],
+                        'content': chunk['text']  # Include the actual content text for retrieval
                     }
 
                     all_vectors.append(embedding)

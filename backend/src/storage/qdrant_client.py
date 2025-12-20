@@ -102,19 +102,27 @@ class QdrantStorage:
                 point_id = str(uuid.uuid4())
 
                 # Create PointStruct with vector and metadata
+                # Include all fields from the payload, with defaults for required fields
+                base_payload = {
+                    'module': payload.get('module', ''),
+                    'chapter': payload.get('chapter', ''),
+                    'section': payload.get('section', ''),
+                    'url': payload.get('url', ''),
+                    'chunk_index': payload.get('chunk_index', 0),
+                    'hash': payload.get('hash', ''),
+                    'created_at': payload.get('created_at', ''),
+                    'content_id': payload.get('content_id', '')
+                }
+
+                # Add any additional fields from the original payload (like 'content')
+                for key, value in payload.items():
+                    if key not in base_payload:
+                        base_payload[key] = value
+
                 point = PointStruct(
                     id=point_id,
                     vector=vector,
-                    payload={
-                        'module': payload.get('module', ''),
-                        'chapter': payload.get('chapter', ''),
-                        'section': payload.get('section', ''),
-                        'url': payload.get('url', ''),
-                        'chunk_index': payload.get('chunk_index', 0),
-                        'hash': payload.get('hash', ''),
-                        'created_at': payload.get('created_at', ''),
-                        'content_id': payload.get('content_id', '')
-                    }
+                    payload=base_payload
                 )
 
                 # Add logging for debugging
@@ -122,7 +130,7 @@ class QdrantStorage:
                 points.append(point)
 
             # Perform upsert operation
-            self.client.upsert_points(
+            self.client.upsert(
                 collection_name=self.collection_name,
                 points=points
             )
@@ -154,7 +162,7 @@ class QdrantStorage:
                 logger.info(f"Upserting point ID: {point.id}, URL: {url}, Chunk index: {chunk_index}")
 
             # Perform upsert operation
-            self.client.upsert_points(
+            self.client.upsert(
                 collection_name=self.collection_name,
                 points=points
             )
