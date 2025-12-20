@@ -1,0 +1,328 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a0f2c 0%, #0d1435 100%);
+  color: white;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 2rem;
+  }
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.centeredContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #8a8aff, #5e72e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media screen and (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.heroContent .hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .HeroContent .hero__subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.authorLine {
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.centeredButtons {
+  justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+.featuresSection {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+[data-theme='dark'] .featuresSection {
+  background-color: #0f172a;
+}
+
+.ctaSection {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #0d243a 0%, #1a3a5f 100%);
+  color: white;
+  text-align: center;
+}
+
+.ctaSection h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .ctaSection h2 {
+    font-size: 2rem;
+  }
+}
+
+.modulesSection {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+[data-theme='dark'] .modulesSection {
+  background-color: #0f172a;
+}
+
+.featureCard {
+  padding: 2rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #5e72e4, #8a8aff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featureCard:hover::before {
+  opacity: 1;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(94, 114, 228, 0.3);
+}
+
+.cardContent h3 {
+  color: #5e72e4;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+[data-theme='dark'] .cardContent h3 {
+  color: #8a8aff;
+}
+
+.cardContent p {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+[data-theme='dark'] .cardContent p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.moduleCard {
+  padding: 2rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.moduleCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2dce89, #2e8555);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.moduleCard:hover::before {
+  opacity: 1;
+}
+
+.moduleCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(45, 206, 137, 0.3);
+}
+
+.moduleCardContent h3 {
+  color: #2dce89;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+[data-theme='dark'] .moduleCardContent h3 {
+  color: #2dce89;
+}
+
+.moduleCardContent p {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+[data-theme='dark'] .moduleCardContent p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.secondaryCta {
+  background-color: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.secondaryCta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.secondaryCta:hover {
+  color: white !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+}
+
+.secondaryCta:hover::before {
+  width: 100%;
+}
+
+[data-theme='dark'] .secondaryCta {
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+[data-theme='dark'] .secondaryCta:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* CTA Button styling */
+.ctaButton {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 1rem 2rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(94, 114, 228, 0.3) !important;
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(94, 114, 228, 0.4), rgba(138, 138, 255, 0.4));
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.ctaButton:hover::before {
+  width: 100%;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(94, 114, 228, 0.4) !important;
+}
+
+/* Icon styling */
+.cardIcon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}

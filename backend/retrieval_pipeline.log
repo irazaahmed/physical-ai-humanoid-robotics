@@ -1,0 +1,611 @@
+2025-12-17 13:14:08,330 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-17 13:14:08,733 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-17 13:14:08,733 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-17 13:14:41,210 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-17 13:14:41,608 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-17 13:14:41,609 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-17 14:05:00,574 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-17 14:05:01,036 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-17 14:05:01,037 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-17 14:05:04,435 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-17 14:05:04,874 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-17 14:05:04,874 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-17 14:06:23,004 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-17 14:06:23,445 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-17 14:06:23,446 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-17 21:46:28,989 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-17 21:46:29,469 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-17 21:46:29,470 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-17 21:46:32,844 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-17 21:46:33,295 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-17 21:46:33,296 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-17 22:02:24,039 - retrieval_pipeline - INFO - Starting retrieval for query: 'Compare PID and MPC control in robotics' with k=5, threshold=0.6
+2025-12-17 22:02:24,039 - retrieval_pipeline - INFO - Preprocessed query: 'Compare PID and MPC control in robotics' (original length: 39, processed length: 39)
+2025-12-17 22:02:24,548 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-17 22:02:24,550 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-17 22:02:24,551 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-17 22:02:24,552 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search'
+2025-12-17 22:02:24,552 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search'
+2025-12-17 22:02:24,604 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 06:44:12,844 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 06:44:13,284 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 06:44:13,285 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 06:44:16,685 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 06:44:17,107 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 06:44:17,108 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 06:47:04,944 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 06:47:04,945 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 06:47:05,360 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 06:47:05,361 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 06:47:05,362 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 06:47:05,363 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 06:47:05,364 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search_points'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search_points(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 06:47:05,367 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 06:50:08,850 - retrieval_pipeline - INFO - Starting retrieval for query: 'query: Explain ROS 2 and its role in humanoid robo...' with k=5, threshold=0.6
+2025-12-18 06:50:08,850 - retrieval_pipeline - INFO - Preprocessed query: 'query: Explain ROS 2 and its role in humanoid robo...' (original length: 54, processed length: 54)
+2025-12-18 06:50:09,634 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 06:50:09,635 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 06:50:09,636 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 06:50:09,636 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 06:50:09,637 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search_points'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search_points(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 06:50:09,640 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 06:59:58,941 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 06:59:59,375 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 06:59:59,376 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 06:59:59,378 - retrieval_pipeline - INFO - Starting retrieval for query: ' Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 06:59:59,379 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 48, processed length: 47)
+2025-12-18 06:59:59,678 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 06:59:59,679 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 06:59:59,680 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 06:59:59,681 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 06:59:59,681 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search_points'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search_points(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 06:59:59,684 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 07:07:09,715 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:07:10,112 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 07:07:10,113 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 07:07:10,116 - retrieval_pipeline - INFO - Starting retrieval for query: ' Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 07:07:10,117 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 48, processed length: 47)
+2025-12-18 07:07:10,409 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:07:10,410 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 07:07:10,411 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 07:07:10,412 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 07:07:10,413 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search_points'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search_points(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 07:07:10,417 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 07:15:55,206 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:15:55,625 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 07:15:55,626 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 07:15:55,628 - retrieval_pipeline - INFO - Starting retrieval for query: ' Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 07:15:55,629 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 48, processed length: 47)
+2025-12-18 07:15:55,910 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:15:55,910 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 07:15:55,911 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 07:15:55,911 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:15:55,912 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:15:55,914 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:27:04,346 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:27:04,777 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 07:27:04,778 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 07:27:04,780 - retrieval_pipeline - INFO - Starting retrieval for query: ' Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 07:27:04,781 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 48, processed length: 47)
+2025-12-18 07:27:05,078 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:27:05,079 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 07:27:05,079 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 07:27:05,080 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:27:05,081 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:27:05,083 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:27:37,543 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 07:27:37,544 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 07:27:37,930 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:27:37,931 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 07:27:37,932 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 07:27:37,932 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:27:37,933 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:27:37,934 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:34:52,517 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:34:52,929 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 07:34:52,930 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 07:34:52,932 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 07:34:52,933 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 07:34:53,214 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:34:53,215 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 07:34:53,216 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 07:34:53,216 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:34:53,216 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 86, in search_similar
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:34:53,219 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 07:40:38,063 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:40:38,491 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 07:40:38,492 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 07:40:38,493 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 07:40:38,493 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 07:40:38,972 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 07:40:38,973 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 07:40:38,974 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 07:40:38,974 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 07:40:38,975 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search_points'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 87, in search_similar
+    results = self.client.search_points(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 07:40:38,977 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 08:00:20,918 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 08:00:21,329 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 08:00:21,330 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 08:00:21,331 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 08:00:21,331 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 08:00:21,607 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 08:00:21,608 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 08:00:21,608 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 08:00:21,609 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 08:00:21,609 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search_points'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 87, in search_similar
+    results = self.client.search_points(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 08:00:21,611 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 08:14:18,354 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 08:14:18,748 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 08:14:18,749 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 08:14:18,751 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 08:14:18,752 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 08:14:19,046 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 08:14:19,047 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 08:14:19,047 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 08:14:19,048 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 08:14:19,049 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 87, in search_similar
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search'
+2025-12-18 08:14:19,052 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 08:24:26,131 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 08:24:26,548 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 08:24:26,549 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 08:24:26,551 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 08:24:26,552 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 08:24:26,845 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 08:24:26,846 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 08:24:26,847 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 08:24:26,848 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 08:24:26,849 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search_points'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 87, in search_similar
+    results = self.client.search_points(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 08:24:26,853 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 11:27:24,410 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 11:27:24,843 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 11:27:24,843 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 11:27:24,844 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 11:27:24,844 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 11:27:25,113 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 11:27:25,114 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 11:27:25,114 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 11:27:25,114 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 11:27:25,114 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search_points'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 87, in search_similar
+    results = self.client.search_points(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 11:27:25,130 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search_points'
+2025-12-18 11:35:50,616 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 11:35:51,045 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 11:35:51,046 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 11:35:53,067 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 11:35:53,487 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 11:35:53,487 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 11:36:33,888 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 11:36:33,889 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 11:36:34,203 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 11:36:34,203 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 11:36:34,203 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 11:36:34,204 - retrieval_pipeline - ERROR - Similarity search failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 11:36:34,204 - retrieval_pipeline - ERROR - Error in Performing similarity search in collection: textbook_embeddings: 'QdrantClient' object has no attribute 'search'
+Traceback (most recent call last):
+  File "D:\Code\GIAIC\Quarter-4-hackathons\physical-ai-humanoid-robotics\backend\src\retrieval\qdrant_searcher.py", line 87, in search_similar
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QdrantClient' object has no attribute 'search'
+2025-12-18 11:36:34,205 - retrieval_pipeline - ERROR - Retrieval process failed: 'QdrantClient' object has no attribute 'search'
+2025-12-18 12:38:33,302 - retrieval_pipeline - WARNING - Attempt 1 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:32 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '2d34a2db-c37e-4d72-ac13-cb8d36cca0bc', 'message': 'invalid api token'}
+2025-12-18 12:38:33,303 - retrieval_pipeline - INFO - Waiting 1.00s before retry...
+2025-12-18 12:38:34,554 - retrieval_pipeline - WARNING - Attempt 2 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:34 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '7067d3dd-2777-4c1c-a2ee-a6e8360a4e55', 'message': 'invalid api token'}
+2025-12-18 12:38:34,555 - retrieval_pipeline - INFO - Waiting 2.95s before retry...
+2025-12-18 12:38:37,744 - retrieval_pipeline - WARNING - Attempt 3 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:37 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'a0a06b1f-891f-4b0b-88d8-db7eeb7287b4', 'message': 'invalid api token'}
+2025-12-18 12:38:37,745 - retrieval_pipeline - ERROR - Error in Cohere query embedding generation: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:37 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'a0a06b1f-891f-4b0b-88d8-db7eeb7287b4', 'message': 'invalid api token'}
+NoneType: None
+2025-12-18 12:38:37,745 - retrieval_pipeline - ERROR - Failed to validate Cohere API key: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:37 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'a0a06b1f-891f-4b0b-88d8-db7eeb7287b4', 'message': 'invalid api token'}
+2025-12-18 12:38:37,746 - retrieval_pipeline - ERROR - Cohere API key validation failed
+2025-12-18 12:38:41,268 - retrieval_pipeline - WARNING - Attempt 1 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:40 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '471f1646-8c13-4aaa-9e90-3cb4ef8262cd', 'message': 'invalid api token'}
+2025-12-18 12:38:41,268 - retrieval_pipeline - INFO - Waiting 1.06s before retry...
+2025-12-18 12:38:42,557 - retrieval_pipeline - WARNING - Attempt 2 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:42 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'ff4226a0-ff2e-407b-9a35-58b159d4afe7', 'message': 'invalid api token'}
+2025-12-18 12:38:42,557 - retrieval_pipeline - INFO - Waiting 2.67s before retry...
+2025-12-18 12:38:45,465 - retrieval_pipeline - WARNING - Attempt 3 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:45 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '88cddd78-40b2-4b6b-8922-f4c32abd739f', 'message': 'invalid api token'}
+2025-12-18 12:38:45,466 - retrieval_pipeline - ERROR - Error in Cohere query embedding generation: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:45 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '88cddd78-40b2-4b6b-8922-f4c32abd739f', 'message': 'invalid api token'}
+NoneType: None
+2025-12-18 12:38:45,466 - retrieval_pipeline - ERROR - Failed to validate Cohere API key: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:38:45 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '88cddd78-40b2-4b6b-8922-f4c32abd739f', 'message': 'invalid api token'}
+2025-12-18 12:38:45,466 - retrieval_pipeline - ERROR - Cohere API key validation failed
+2025-12-18 12:41:52,652 - retrieval_pipeline - WARNING - Attempt 1 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:41:52 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '4fc14d4a-655b-4d97-8c03-c922acbe656c', 'message': 'invalid api token'}
+2025-12-18 12:41:52,652 - retrieval_pipeline - INFO - Waiting 1.09s before retry...
+2025-12-18 12:41:54,013 - retrieval_pipeline - WARNING - Attempt 2 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:41:53 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '2c11b64e-0a3f-42c3-932d-a45181d92e35', 'message': 'invalid api token'}
+2025-12-18 12:41:54,013 - retrieval_pipeline - INFO - Waiting 2.57s before retry...
+2025-12-18 12:41:56,835 - retrieval_pipeline - WARNING - Attempt 3 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:41:56 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'c232ea53-1889-4fd0-a196-0a3b7071324d', 'message': 'invalid api token'}
+2025-12-18 12:41:56,836 - retrieval_pipeline - ERROR - Error in Cohere query embedding generation: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:41:56 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'c232ea53-1889-4fd0-a196-0a3b7071324d', 'message': 'invalid api token'}
+NoneType: None
+2025-12-18 12:41:56,837 - retrieval_pipeline - ERROR - Failed to validate Cohere API key: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:41:56 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'c232ea53-1889-4fd0-a196-0a3b7071324d', 'message': 'invalid api token'}
+2025-12-18 12:41:56,837 - retrieval_pipeline - ERROR - Cohere API key validation failed
+2025-12-18 12:42:00,265 - retrieval_pipeline - WARNING - Attempt 1 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:41:59 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'f00ca73f-38bd-4ce6-a387-b8992c70368f', 'message': 'invalid api token'}
+2025-12-18 12:42:00,265 - retrieval_pipeline - INFO - Waiting 1.90s before retry...
+2025-12-18 12:42:02,413 - retrieval_pipeline - WARNING - Attempt 2 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:42:02 GMT', 'x-envoy-upstream-service-time': '4', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '60fb8d60-ca7b-4998-a998-b0dd26bae42e', 'message': 'invalid api token'}
+2025-12-18 12:42:02,413 - retrieval_pipeline - INFO - Waiting 2.50s before retry...
+2025-12-18 12:42:05,147 - retrieval_pipeline - WARNING - Attempt 3 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:42:04 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'ff0cc430-9664-4023-baef-cdfc05363947', 'message': 'invalid api token'}
+2025-12-18 12:42:05,147 - retrieval_pipeline - ERROR - Error in Cohere query embedding generation: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:42:04 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'ff0cc430-9664-4023-baef-cdfc05363947', 'message': 'invalid api token'}
+NoneType: None
+2025-12-18 12:42:05,147 - retrieval_pipeline - ERROR - Failed to validate Cohere API key: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:42:04 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'ff0cc430-9664-4023-baef-cdfc05363947', 'message': 'invalid api token'}
+2025-12-18 12:42:05,148 - retrieval_pipeline - ERROR - Cohere API key validation failed
+2025-12-18 12:43:37,870 - retrieval_pipeline - WARNING - Attempt 1 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:37 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '90230b41-1e6e-4075-a400-3f1dfbea727f', 'message': 'invalid api token'}
+2025-12-18 12:43:37,871 - retrieval_pipeline - INFO - Waiting 1.70s before retry...
+2025-12-18 12:43:39,808 - retrieval_pipeline - WARNING - Attempt 2 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:39 GMT', 'x-envoy-upstream-service-time': '4', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '3bb57da9-36d3-44a4-b806-c8afa559b456', 'message': 'invalid api token'}
+2025-12-18 12:43:39,808 - retrieval_pipeline - INFO - Waiting 2.46s before retry...
+2025-12-18 12:43:42,502 - retrieval_pipeline - WARNING - Attempt 3 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:42 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'c8cee63e-58cb-4274-b5a4-e318ee9a6e7e', 'message': 'invalid api token'}
+2025-12-18 12:43:42,503 - retrieval_pipeline - ERROR - Error in Cohere query embedding generation: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:42 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'c8cee63e-58cb-4274-b5a4-e318ee9a6e7e', 'message': 'invalid api token'}
+NoneType: None
+2025-12-18 12:43:42,504 - retrieval_pipeline - ERROR - Failed to validate Cohere API key: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:42 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'c8cee63e-58cb-4274-b5a4-e318ee9a6e7e', 'message': 'invalid api token'}
+2025-12-18 12:43:42,504 - retrieval_pipeline - ERROR - Cohere API key validation failed
+2025-12-18 12:43:46,838 - retrieval_pipeline - WARNING - Attempt 1 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:46 GMT', 'x-envoy-upstream-service-time': '4', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '2748f15c-96e8-4d36-a474-f8309141e98d', 'message': 'invalid api token'}
+2025-12-18 12:43:46,839 - retrieval_pipeline - INFO - Waiting 1.55s before retry...
+2025-12-18 12:43:48,618 - retrieval_pipeline - WARNING - Attempt 2 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:48 GMT', 'x-envoy-upstream-service-time': '4', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '062ab1cf-cc92-4d23-a7ef-c5a30c0a56fd', 'message': 'invalid api token'}
+2025-12-18 12:43:48,618 - retrieval_pipeline - INFO - Waiting 2.59s before retry...
+2025-12-18 12:43:51,442 - retrieval_pipeline - WARNING - Attempt 3 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:51 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'e48c6b04-0aa1-401e-8a3f-03cee6b59ce7', 'message': 'invalid api token'}
+2025-12-18 12:43:51,443 - retrieval_pipeline - ERROR - Error in Cohere query embedding generation: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:51 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'e48c6b04-0aa1-401e-8a3f-03cee6b59ce7', 'message': 'invalid api token'}
+NoneType: None
+2025-12-18 12:43:51,444 - retrieval_pipeline - ERROR - Failed to validate Cohere API key: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:51 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'e48c6b04-0aa1-401e-8a3f-03cee6b59ce7', 'message': 'invalid api token'}
+2025-12-18 12:43:51,445 - retrieval_pipeline - ERROR - Cohere API key validation failed
+2025-12-18 12:43:55,882 - retrieval_pipeline - WARNING - Attempt 1 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:55 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'd0561ca2-b882-4a84-ac0d-805073b896aa', 'message': 'invalid api token'}
+2025-12-18 12:43:55,882 - retrieval_pipeline - INFO - Waiting 1.24s before retry...
+2025-12-18 12:43:57,359 - retrieval_pipeline - WARNING - Attempt 2 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:57 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'ad53f20f-06dd-47a3-bf57-b4892c2aa79b', 'message': 'invalid api token'}
+2025-12-18 12:43:57,360 - retrieval_pipeline - INFO - Waiting 2.62s before retry...
+2025-12-18 12:44:00,208 - retrieval_pipeline - WARNING - Attempt 3 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:59 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '59649f9f-6955-41f4-86dd-e02baa4737c7', 'message': 'invalid api token'}
+2025-12-18 12:44:00,209 - retrieval_pipeline - ERROR - Error in Cohere query embedding generation: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:59 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '59649f9f-6955-41f4-86dd-e02baa4737c7', 'message': 'invalid api token'}
+NoneType: None
+2025-12-18 12:44:00,209 - retrieval_pipeline - ERROR - Failed to validate Cohere API key: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:43:59 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '59649f9f-6955-41f4-86dd-e02baa4737c7', 'message': 'invalid api token'}
+2025-12-18 12:44:00,209 - retrieval_pipeline - ERROR - Cohere API key validation failed
+2025-12-18 12:44:03,483 - retrieval_pipeline - WARNING - Attempt 1 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:44:03 GMT', 'x-envoy-upstream-service-time': '6', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': 'ca954504-5994-4906-ad39-b383b6a2fea6', 'message': 'invalid api token'}
+2025-12-18 12:44:03,483 - retrieval_pipeline - INFO - Waiting 1.85s before retry...
+2025-12-18 12:44:05,570 - retrieval_pipeline - WARNING - Attempt 2 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:44:05 GMT', 'x-envoy-upstream-service-time': '2', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '6f62bed9-14d5-4491-a8fe-842c8352d21e', 'message': 'invalid api token'}
+2025-12-18 12:44:05,570 - retrieval_pipeline - INFO - Waiting 2.68s before retry...
+2025-12-18 12:44:08,479 - retrieval_pipeline - WARNING - Attempt 3 failed to generate embeddings: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:44:08 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '016d4e58-97b4-4a1f-8bae-93455764d762', 'message': 'invalid api token'}
+2025-12-18 12:44:08,480 - retrieval_pipeline - ERROR - Error in Cohere query embedding generation: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:44:08 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '016d4e58-97b4-4a1f-8bae-93455764d762', 'message': 'invalid api token'}
+NoneType: None
+2025-12-18 12:44:08,480 - retrieval_pipeline - ERROR - Failed to validate Cohere API key: headers: {'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'date': 'Thu, 18 Dec 2025 07:44:08 GMT', 'x-envoy-upstream-service-time': '3', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 401, body: {'id': '016d4e58-97b4-4a1f-8bae-93455764d762', 'message': 'invalid api token'}
+2025-12-18 12:44:08,480 - retrieval_pipeline - ERROR - Cohere API key validation failed
+2025-12-18 12:52:13,588 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 12:52:14,012 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 12:52:14,012 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 12:52:17,675 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 12:52:18,102 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 12:52:18,102 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 12:53:43,208 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 12:53:43,208 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 12:53:43,539 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 12:53:43,540 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 12:53:43,541 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 12:53:43,993 - retrieval_pipeline - WARNING - Skipping result due to missing attributes: 'tuple' object has no attribute 'score'
+2025-12-18 12:53:43,994 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 12:53:43,995 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 12:53:43,995 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 12:53:43,996 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 12:53:43,996 - retrieval_pipeline - INFO - Retrieval completed in 0.79ms, found 0 results
+2025-12-18 13:13:31,884 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:13:32,290 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:13:32,291 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:13:32,292 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain ROS 2 and its role in humanoid robotics' with k=5, threshold=0.6
+2025-12-18 13:13:32,293 - retrieval_pipeline - INFO - Preprocessed query: 'Explain ROS 2 and its role in humanoid robotics' (original length: 47, processed length: 47)
+2025-12-18 13:13:32,584 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:13:32,585 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:13:32,585 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:13:32,750 - retrieval_pipeline - WARNING - Skipping result due to missing attributes: 'tuple' object has no attribute 'score'
+2025-12-18 13:13:32,750 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:13:32,751 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:13:32,751 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:13:32,752 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:13:32,753 - retrieval_pipeline - INFO - Retrieval completed in 0.46ms, found 0 results
+2025-12-18 13:14:51,715 - retrieval_pipeline - INFO - Starting retrieval for query: 'Compare PID and MPC control in robotics' with k=5, threshold=0.6
+2025-12-18 13:14:51,715 - retrieval_pipeline - INFO - Preprocessed query: 'Compare PID and MPC control in robotics' (original length: 39, processed length: 39)
+2025-12-18 13:14:52,044 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:14:52,045 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:14:52,046 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:14:52,473 - retrieval_pipeline - WARNING - Skipping result due to missing attributes: 'tuple' object has no attribute 'score'
+2025-12-18 13:14:52,474 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:14:52,475 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:14:52,476 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:14:52,477 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:14:52,479 - retrieval_pipeline - INFO - Retrieval completed in 0.76ms, found 0 results
+2025-12-18 13:15:31,544 - retrieval_pipeline - INFO - Starting retrieval for query: 'Compare PID and MPC control in robotics' with k=5, threshold=0.6
+2025-12-18 13:15:31,544 - retrieval_pipeline - INFO - Preprocessed query: 'Compare PID and MPC control in robotics' (original length: 39, processed length: 39)
+2025-12-18 13:15:31,874 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:15:31,875 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:15:31,875 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:15:32,280 - retrieval_pipeline - WARNING - Skipping result due to missing attributes: 'tuple' object has no attribute 'score'
+2025-12-18 13:15:32,281 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:15:32,281 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:15:32,282 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:15:32,282 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:15:32,283 - retrieval_pipeline - INFO - Retrieval completed in 0.74ms, found 0 results
+2025-12-18 13:44:56,376 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:44:56,813 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:44:56,814 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:44:56,814 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is ROS 2?' with k=5, threshold=0.6
+2025-12-18 13:44:56,814 - retrieval_pipeline - INFO - Preprocessed query: 'What is ROS 2?' (original length: 14, processed length: 14)
+2025-12-18 13:44:57,087 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:44:57,087 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:44:57,087 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:44:57,264 - retrieval_pipeline - WARNING - Skipping result due to missing attributes: 'tuple' object has no attribute 'score'
+2025-12-18 13:44:57,264 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:44:57,264 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:44:57,265 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:44:57,265 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:44:57,265 - retrieval_pipeline - INFO - Retrieval completed in 0.45ms, found 0 results
+2025-12-18 13:45:49,389 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:45:49,829 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:45:49,829 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:45:49,830 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is ROS 2?' with k=5, threshold=0.6
+2025-12-18 13:45:49,830 - retrieval_pipeline - INFO - Preprocessed query: 'What is ROS 2?' (original length: 14, processed length: 14)
+2025-12-18 13:45:50,096 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:45:50,096 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:45:50,097 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:45:50,256 - retrieval_pipeline - WARNING - Skipping result due to missing attributes: 'tuple' object has no attribute 'score'
+2025-12-18 13:45:50,257 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:45:50,257 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:45:50,258 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:45:50,258 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:45:50,258 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 0 results
+2025-12-18 13:47:27,047 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:47:27,473 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:47:27,475 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:47:27,477 - retrieval_pipeline - INFO - Starting retrieval for query: 'Compare PID and MPC control in robotics' with k=5, threshold=0.6
+2025-12-18 13:47:27,478 - retrieval_pipeline - INFO - Preprocessed query: 'Compare PID and MPC control in robotics' (original length: 39, processed length: 39)
+2025-12-18 13:47:27,759 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:47:27,760 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:47:27,761 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:47:27,924 - retrieval_pipeline - WARNING - Skipping result due to missing attributes: 'tuple' object has no attribute 'score'
+2025-12-18 13:47:27,925 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:47:27,926 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:47:27,927 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:47:27,928 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:47:27,929 - retrieval_pipeline - INFO - Retrieval completed in 0.45ms, found 0 results
+2025-12-18 13:49:32,472 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:49:32,923 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:49:32,924 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:49:32,926 - retrieval_pipeline - INFO - Starting retrieval for query: 'Compare PID and MPC control in robotics' with k=5, threshold=0.6
+2025-12-18 13:49:32,927 - retrieval_pipeline - INFO - Preprocessed query: 'Compare PID and MPC control in robotics' (original length: 39, processed length: 39)
+2025-12-18 13:49:33,211 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:49:33,212 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:49:33,213 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:49:33,381 - retrieval_pipeline - WARNING - Skipping result due to missing attributes: 'tuple' object has no attribute 'score'
+2025-12-18 13:49:33,382 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:49:33,383 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:49:33,384 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:49:33,385 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:49:33,385 - retrieval_pipeline - INFO - Retrieval completed in 0.46ms, found 0 results
+2025-12-18 13:56:11,915 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:56:12,322 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:56:12,322 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:56:12,323 - retrieval_pipeline - INFO - Starting retrieval for query: 'Compare PID and MPC control in robotics' with k=5, threshold=0.6
+2025-12-18 13:56:12,323 - retrieval_pipeline - INFO - Preprocessed query: 'Compare PID and MPC control in robotics' (original length: 39, processed length: 39)
+2025-12-18 13:56:12,600 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:56:12,601 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:56:12,601 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:56:12,755 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:56:12,755 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:56:12,756 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:56:12,756 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:56:12,756 - retrieval_pipeline - INFO - Retrieval completed in 0.43ms, found 0 results
+2025-12-18 13:57:28,415 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:57:28,840 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:57:28,841 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:57:28,842 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is machine learning?' with k=5, threshold=0.6
+2025-12-18 13:57:28,842 - retrieval_pipeline - INFO - Preprocessed query: 'What is machine learning?' (original length: 25, processed length: 25)
+2025-12-18 13:57:29,543 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:57:29,543 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:57:29,544 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:57:29,712 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:57:29,712 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:57:29,712 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:57:29,713 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:57:29,713 - retrieval_pipeline - INFO - Retrieval completed in 0.87ms, found 0 results
+2025-12-18 13:58:41,175 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:58:41,653 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:58:41,654 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:58:41,655 - retrieval_pipeline - INFO - Starting retrieval for query: 'Compare PID and MPC control in robotics' with k=5, threshold=0.6
+2025-12-18 13:58:41,655 - retrieval_pipeline - INFO - Preprocessed query: 'Compare PID and MPC control in robotics' (original length: 39, processed length: 39)
+2025-12-18 13:58:41,920 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:58:41,921 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:58:41,921 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:58:42,136 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:58:42,137 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:58:42,137 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:58:42,138 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:58:42,138 - retrieval_pipeline - INFO - Retrieval completed in 0.48ms, found 0 results
+2025-12-18 13:58:52,877 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:58:53,336 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 13:58:53,337 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 13:58:53,338 - retrieval_pipeline - INFO - Starting retrieval for query: 'Compare PID and MPC control in robotics' with k=5, threshold=0.6
+2025-12-18 13:58:53,338 - retrieval_pipeline - INFO - Preprocessed query: 'Compare PID and MPC control in robotics' (original length: 39, processed length: 39)
+2025-12-18 13:58:53,600 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 13:58:53,601 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 13:58:53,601 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 13:58:53,784 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 13:58:53,784 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 13:58:53,785 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 13:58:53,786 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 13:58:53,787 - retrieval_pipeline - INFO - Retrieval completed in 0.45ms, found 0 results
+2025-12-18 18:59:00,076 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 18:59:00,541 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 18:59:00,541 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 18:59:02,560 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 18:59:03,000 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 18:59:03,000 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 19:04:16,771 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:04:17,212 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 19:04:17,212 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 19:10:33,760 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is ROS 2 and its role in robotic systems?' with k=5, threshold=0.6
+2025-12-18 19:10:33,760 - retrieval_pipeline - INFO - Preprocessed query: 'What is ROS 2 and its role in robotic systems?' (original length: 46, processed length: 46)
+2025-12-18 19:10:34,689 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:10:34,689 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 19:10:34,689 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 19:10:35,467 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 19:10:35,467 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 19:10:35,467 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 19:10:35,467 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 19:10:35,467 - retrieval_pipeline - INFO - Retrieval completed in 1.71ms, found 0 results
+2025-12-18 19:11:18,439 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain the publisher-subscriber pattern in ROS 2' with k=5, threshold=0.6
+2025-12-18 19:11:18,439 - retrieval_pipeline - INFO - Preprocessed query: 'Explain the publisher-subscriber pattern in ROS 2' (original length: 49, processed length: 49)
+2025-12-18 19:11:18,751 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:11:18,751 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 19:11:18,751 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 19:11:19,173 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 19:11:19,173 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 19:11:19,173 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 19:11:19,173 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 19:11:19,173 - retrieval_pipeline - INFO - Retrieval completed in 0.73ms, found 0 results
+2025-12-18 19:11:56,553 - retrieval_pipeline - INFO - Starting retrieval for query: 'What does lab1-pubsub cover in the textbook?' with k=5, threshold=0.6
+2025-12-18 19:11:56,553 - retrieval_pipeline - INFO - Preprocessed query: 'What does lab1-pubsub cover in the textbook?' (original length: 44, processed length: 44)
+2025-12-18 19:11:56,869 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:11:56,869 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 19:11:56,869 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 19:11:57,278 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 19:11:57,278 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 19:11:57,278 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 19:11:57,278 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 19:11:57,278 - retrieval_pipeline - INFO - Retrieval completed in 0.73ms, found 0 results
+2025-12-18 19:12:17,752 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:12:18,145 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 19:12:18,145 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 19:20:41,610 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:20:42,011 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 19:20:42,011 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 19:20:43,943 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:20:44,335 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 19:20:44,335 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 19:21:31,314 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:21:31,703 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-18 19:21:31,703 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-18 19:28:12,031 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is ROS 2?' with k=5, threshold=0.6
+2025-12-18 19:28:12,031 - retrieval_pipeline - INFO - Preprocessed query: 'What is ROS 2?' (original length: 14, processed length: 14)
+2025-12-18 19:28:12,923 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:28:12,923 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 19:28:12,923 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 19:28:13,726 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 19:28:13,727 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 19:28:13,727 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 19:28:13,727 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 19:28:13,727 - retrieval_pipeline - INFO - Retrieval completed in 1.70ms, found 0 results
+2025-12-18 19:28:41,033 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain publisher subscriber pattern in ROS 2' with k=5, threshold=0.6
+2025-12-18 19:28:41,033 - retrieval_pipeline - INFO - Preprocessed query: 'Explain publisher subscriber pattern in ROS 2' (original length: 45, processed length: 45)
+2025-12-18 19:28:41,357 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-18 19:28:41,358 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-18 19:28:41,358 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-18 19:28:41,752 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-18 19:28:41,753 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-18 19:28:41,753 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-18 19:28:41,753 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-18 19:28:41,753 - retrieval_pipeline - INFO - Retrieval completed in 0.72ms, found 0 results
+2025-12-20 10:02:58,052 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 10:02:58,478 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 10:02:58,480 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 10:03:01,962 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 10:03:02,360 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 10:03:02,361 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 10:04:34,578 - retrieval_pipeline - INFO - Starting retrieval for query: 'What is ROS 2?' with k=5, threshold=0.6
+2025-12-20 10:04:34,579 - retrieval_pipeline - INFO - Preprocessed query: 'What is ROS 2?' (original length: 14, processed length: 14)
+2025-12-20 10:04:34,956 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 10:04:34,957 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 10:04:34,957 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 10:04:35,394 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 10:04:35,395 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 10:04:35,396 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 10:04:35,397 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 10:04:35,398 - retrieval_pipeline - INFO - Retrieval completed in 0.82ms, found 0 results
+2025-12-20 10:05:17,920 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain publisher subscriber pattern in ROS 2' with k=5, threshold=0.6
+2025-12-20 10:05:17,920 - retrieval_pipeline - INFO - Preprocessed query: 'Explain publisher subscriber pattern in ROS 2' (original length: 45, processed length: 45)
+2025-12-20 10:05:18,298 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 10:05:18,298 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 10:05:18,299 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 10:05:18,702 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 10:05:18,703 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 10:05:18,703 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 10:05:18,704 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 10:05:18,705 - retrieval_pipeline - INFO - Retrieval completed in 0.79ms, found 0 results
+2025-12-20 10:11:06,406 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 10:11:06,825 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 10:11:06,826 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-20 10:11:06,829 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain publisher subscriber pattern in ROS 2' with k=5, threshold=0.6
+2025-12-20 10:11:06,829 - retrieval_pipeline - INFO - Preprocessed query: 'Explain publisher subscriber pattern in ROS 2' (original length: 45, processed length: 45)
+2025-12-20 10:11:07,167 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 10:11:07,168 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 10:11:07,169 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 10:11:07,330 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 10:11:07,330 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 10:11:07,331 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 10:11:07,331 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 10:11:07,332 - retrieval_pipeline - INFO - Retrieval completed in 0.50ms, found 0 results
+2025-12-20 10:12:15,990 - retrieval_pipeline - INFO - Starting retrieval for query: 'Explain publisher subscriber pattern in ROS 2' with k=5, threshold=0.6
+2025-12-20 10:12:15,991 - retrieval_pipeline - INFO - Preprocessed query: 'Explain publisher subscriber pattern in ROS 2' (original length: 45, processed length: 45)
+2025-12-20 10:12:16,376 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 10:12:16,377 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-20 10:12:16,378 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-20 10:12:16,829 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-20 10:12:16,830 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-20 10:12:16,831 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-20 10:12:16,832 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-20 10:12:16,833 - retrieval_pipeline - INFO - Retrieval completed in 0.84ms, found 0 results

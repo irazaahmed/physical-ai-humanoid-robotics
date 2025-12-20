@@ -1,0 +1,146 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url('./book-landing.css');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1a73e8;
+  --ifm-color-primary-dark: #1863cc;
+  --ifm-color-primary-darker: #1658bb;
+  --ifm-color-primary-darkest: #124799;
+  --ifm-color-primary-light: #3a86ec;
+  --ifm-color-primary-lighter: #4ca0ee;
+  --ifm-color-primary-lightest: #7fb7f2;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Additional custom colors for the textbook */
+  --textbook-primary: #1a73e8;
+  --textbook-secondary: #0d6efd;
+  --textbook-accent: #ff6b6b;
+  --textbook-background: #f8f9fa;
+  --textbook-dark: #212529;
+  --textbook-card-bg: #ffffff;
+  --textbook-border: #dee2e6;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4dabf7;
+  --ifm-color-primary-dark: #339af0;
+  --ifm-color-primary-darker: #228be6;
+  --ifm-color-primary-darkest: #1c7ed6;
+  --ifm-color-primary-light: #74c0fc;
+  --ifm-color-primary-lighter: #91d1fc;
+  --ifm-color-primary-lightest: #b6e3ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode custom colors */
+  --textbook-primary: #4dabf7;
+  --textbook-secondary: #339af0;
+  --textbook-accent: #ff8787;
+  --textbook-background: #121212;
+  --textbook-dark: #f8f9fa;
+  --textbook-card-bg: #1e1e1e;
+  --textbook-border: #404040;
+}
+
+/* Enhanced button styles */
+.button--secondary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+/* Custom styles for header button */
+.header-open-book-button {
+  background-color: var(--ifm-color-primary) !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  font-weight: bold !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.header-open-book-button:hover {
+  background-color: var(--ifm-color-primary-dark) !important;
+  color: white !important;
+}
+
+/* Card-like containers for features */
+.feature-card {
+  background: var(--textbook-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .feature-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] .feature-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero banner enhancement */
+.hero--primary {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+  color: white;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, #1b263b 0%, #2c3e50 100%);
+}
+
+/* Sidebar enhancements */
+.menu__list-item-collapsible,
+.menu__link {
+  transition: all 0.2s ease;
+}
+
+.menu__link--active:not(.menu__link--external) {
+  background-color: rgba(26, 115, 232, 0.1);
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+/* Code block enhancements */
+.prism-code {
+  border-radius: 8px;
+}
+
+/* Table styling */
+.table {
+  border: 1px solid var(--textbook-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  border-color: var(--textbook-border);
+}
+
+/* Improved typography */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  font-weight: 600;
+}

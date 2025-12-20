@@ -1,0 +1,47 @@
+/**
+ * Custom styles for the book landing page
+ */
+
+.header-open-book-button {
+  background-color: var(--ifm-color-primary) !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  margin-right: 1rem !important;
+}
+
+.header-open-book-button:hover {
+  background-color: var(--ifm-color-primary-dark) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.heroContainer {
+  position: relative;
+  padding: 4rem 0;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f2b46 0%, #1a3a5f 100%);
+  color: white;
+}
+
+.cybrumIntro {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cybrumIntro p {
+  margin: 0;
+  font-style: italic;
+  opacity: 0.9;
+}

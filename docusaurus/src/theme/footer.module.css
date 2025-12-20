@@ -1,0 +1,130 @@
+/**
+ * CSS Module for the footer component
+ * Highly specific selectors to override global styles
+ */
+
+.footer {
+  background: linear-gradient(180deg, #0a0f2c 0%, #0d1435 100%) !important;
+  color: #e6f2f8 !important;
+  padding: 64px 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin-top: auto !important;
+}
+
+/* Ensure all text elements have high contrast */
+.footer h4,
+.footer .h4 {
+  color: #a3bffa !important;
+  margin-bottom: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #5e72e4, #8a8aff);
+}
+
+.footer a,
+.footer .link {
+  color: #93c5fd !important;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+.footer a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: linear-gradient(90deg, #5e72e4, #8a8aff);
+  transition: width 0.3s ease;
+}
+
+.footer a:hover {
+  color: #bfdbfe !important;
+  transform: translateX(3px);
+}
+
+.footer a:hover::before {
+  width: 100%;
+}
+
+.footer p,
+.footer .aboutText {
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.footer .copyright {
+  color: rgba(255, 255, 255, 0.7) !important;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+.container {
+  padding: 0 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5rem;
+  gap: 2rem;
+}
+
+.col {
+  padding: 0 1.5rem;
+  flex: 1 0 280px; /* At least 280px per column, or grow as needed */
+}
+
+.clean-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clean-list li {
+  margin-bottom: 0.85rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.h4 {
+  color: #a3bffa;
+  margin-bottom: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.aboutText {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: 300px;
+}

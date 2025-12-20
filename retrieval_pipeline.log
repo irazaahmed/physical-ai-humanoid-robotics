@@ -1,0 +1,3 @@
+2025-12-20 01:21:37,382 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-20 01:21:37,809 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-20 01:21:37,810 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
