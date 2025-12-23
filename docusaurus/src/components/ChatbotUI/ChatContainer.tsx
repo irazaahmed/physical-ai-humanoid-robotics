@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import MessageDisplay from './MessageDisplay';
+import React, { useState } from 'react';
 import './ChatContainer.css';
 
 interface Message {
@@ -9,8 +8,25 @@ interface Message {
   timestamp: Date;
 }
 
+// Configuration for the chatbot API
+const CHATBOT_CONFIG = {
+  // API endpoint configuration - defaults to localhost but can be overridden
+  API_BASE_URL: process.env.REACT_APP_CHATBOT_API_URL || 'http://localhost:8001/api/v1',
+  CHAT_ENDPOINT: '/chat',
+  TIMEOUT_MS: 30000, // 30 seconds
+  MAX_RETRIES: 3,
+  SESSION_PREFIX: 'web-session-'
+};
+
 const ChatContainer: React.FC = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: 'welcome',
+      content: 'Hello! I\'m your AI assistant for Physical AI & Humanoid Robotics. How can I help you today?',
+      role: 'assistant',
+      timestamp: new Date()
+    }
+  ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -29,92 +45,59 @@ const ChatContainer: React.FC = () => {
     setInputValue('');
     setIsLoading(true);
 
-    // Retry mechanism for API calls
-    const maxRetries = 3;
-    let retryCount = 0;
-    let lastError: Error | null = null;
+    try {
+      // Create an AbortController for timeout handling
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), CHATBOT_CONFIG.TIMEOUT_MS);
 
-    while (retryCount <= maxRetries) {
-      try {
-        // Create an AbortController for timeout handling
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+      // Call the backend API to get the response
+      const response = await fetch(`${CHATBOT_CONFIG.API_BASE_URL}${CHATBOT_CONFIG.CHAT_ENDPOINT}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          query: inputValue,
+          session_id: CHATBOT_CONFIG.SESSION_PREFIX + Date.now().toString()
+        }),
+        signal: controller.signal, // Use the abort signal for timeout
+      });
 
-        // Call the backend API to get the response
-        const response = await fetch('http://localhost:8001/api/v1/chat', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            query: inputValue,
-            session_id: 'web-session-' + Date.now().toString()
-          }),
-          signal: controller.signal, // Use the abort signal for timeout
-        });
+      clearTimeout(timeoutId); // Clear timeout if request completes
 
-        clearTimeout(timeoutId); // Clear timeout if request completes
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        // Add assistant response to the conversation
-        const assistantMessage: Message = {
-          id: Date.now().toString(),
-          content: data.answer || data.response || data.content || 'No response received',
-          role: 'assistant',
-          timestamp: new Date(),
-        };
-
-        setMessages(prev => [...prev, assistantMessage]);
-        lastError = null; // Clear any previous error on success
-        break; // Exit retry loop on success
-      } catch (error) {
-        // Clear timeout if request fails
-        if (typeof clearTimeout !== 'undefined') {
-          // We can't clear the timeout here since it's already been triggered if this is a timeout error
-        }
-
-        // Check if the error is due to timeout
-        if (error instanceof Error && error.name === 'AbortError') {
-          lastError = new Error('Request timed out. Please try again.');
-        } else {
-          lastError = error as Error;
-        }
-
-        retryCount++;
-
-        // If we've exhausted retries, break out of the loop
-        if (retryCount > maxRetries) {
-          break;
-        }
-
-        // Wait before retrying (exponential backoff: 1s, 2s, 4s)
-        await new Promise(resolve => setTimeout(resolve, Math.pow(2, retryCount) * 1000));
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-    }
 
-    if (lastError) {
-      console.error('Error sending message after retries:', lastError);
+      const data = await response.json();
+
+      // Add assistant response to the conversation
+      const assistantMessage: Message = {
+        id: Date.now().toString(),
+        content: data.answer || data.response || data.content || 'No response received',
+        role: 'assistant',
+        timestamp: new Date(),
+      };
+
+      setMessages(prev => [...prev, assistantMessage]);
+    } catch (error) {
+      console.error('Error sending message:', error);
 
       // Add error message to the conversation
       const errorMessage: Message = {
         id: Date.now().toString(),
-        content: 'Sorry, I encountered an issue processing your request. Please try again.',
+        content: 'Sorry, I encountered an issue processing your request. Please make sure the backend service is running.',
         role: 'assistant',
         timestamp: new Date(),
       };
 
       setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
     }
-
-    setIsLoading(false);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
@@ -127,7 +110,51 @@ const ChatContainer: React.FC = () => {
         <h3>AI Assistant</h3>
       </div>
 
-      <MessageDisplay messages={messages} isLoading={isLoading} />
+      <div className="chat-messages">
+        {messages.map((message) => (
+          <div
+            key={message.id}
+            className={`message ${message.role}`}
+            style={{
+              display: 'flex',
+              justifyContent: message.role === 'user' ? 'flex-end' : 'flex-start',
+              marginBottom: '10px'
+            }}
+          >
+            <div
+              className={`message-bubble ${message.role}`}
+              style={{
+                padding: '8px 12px',
+                borderRadius: '18px',
+                maxWidth: '80%',
+                wordWrap: 'break-word',
+                backgroundColor: message.role === 'user' ? '#e3f2fd' : '#f5f5f5',
+              }}
+            >
+              {message.content}
+            </div>
+          </div>
+        ))}
+        {isLoading && (
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-start',
+              marginBottom: '10px'
+            }}
+          >
+            <div
+              style={{
+                padding: '8px 12px',
+                borderRadius: '18px',
+                backgroundColor: '#f5f5f5',
+              }}
+            >
+              Thinking...
+            </div>
+          </div>
+        )}
+      </div>
 
       <div className="chat-input-area">
         <div className="input-container">
@@ -139,16 +166,37 @@ const ChatContainer: React.FC = () => {
             disabled={isLoading}
             rows={1}
             className="chat-input"
+            style={{
+              width: 'calc(100% - 60px)',
+              padding: '10px',
+              border: '1px solid #ddd',
+              borderRadius: '4px',
+              resize: 'none',
+              fontSize: '14px',
+              minHeight: '40px',
+              maxHeight: '100px'
+            }}
           />
           <button
             onClick={handleSendMessage}
             disabled={isLoading || !inputValue.trim()}
             className="send-button"
+            style={{
+              width: '50px',
+              height: '40px',
+              marginLeft: '10px',
+              padding: '8px',
+              border: 'none',
+              borderRadius: '4px',
+              backgroundColor: isLoading || !inputValue.trim() ? '#ccc' : '#1a73e8',
+              color: 'white',
+              cursor: isLoading || !inputValue.trim() ? 'not-allowed' : 'pointer'
+            }}
           >
-            {isLoading ? 'Sending...' : 'Send'}
+            {isLoading ? '...' : 'Send'}
           </button>
         </div>
-        <div className="input-hint">
+        <div className="input-hint" style={{ fontSize: '12px', color: '#999', marginTop: '5px' }}>
           Press Enter to send, Shift+Enter for new line
         </div>
       </div>

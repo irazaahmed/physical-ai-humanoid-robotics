@@ -5,6 +5,7 @@ This module sets up the FastAPI app with routing and integrates with other compo
 """
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from slowapi.errors import RateLimitExceeded
 import os
 from dotenv import load_dotenv
@@ -18,6 +19,17 @@ app = FastAPI(
     title="Physical AI & Humanoid Robotics - Agent Service",
     description="Google Gemini agent service providing reasoning capabilities over textbook content",
     version="1.0.0"
+)
+
+# Add CORS middleware to allow requests from the frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific frontend URLs
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    # Expose custom headers if needed
+    # expose_headers=["Access-Control-Allow-Origin"]
 )
 
 # Set up rate limiting
