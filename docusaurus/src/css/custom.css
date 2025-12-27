@@ -68,21 +68,35 @@
 
 /* Custom styles for header button */
 .header-open-book-button {
-  background-color: var(--ifm-color-primary) !important;
+  background-color: var(--ifm-color-secondary) !important; /* Darker blue/purple tone for light mode */
   color: white !important;
   border: none !important;
   padding: 8px 16px !important;
   border-radius: 8px !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 4px 15px rgba(0, 195, 255, 0.3) !important;
+  box-shadow: 0 4px 10px rgba(106, 90, 205, 0.3) !important; /* Purple/blue shadow for light mode */
 }
 
 .header-open-book-button:hover {
-  background-color: var(--ifm-color-primary-dark) !important;
+  background-color: #5a4fcf !important; /* Slightly brighter for light mode */
   color: white !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(0, 195, 255, 0.4) !important;
+  box-shadow: 0 6px 15px rgba(106, 90, 205, 0.4) !important;
+}
+
+/* Dark mode specific styles for header button */
+[data-theme='dark'] .header-open-book-button {
+  background-color: #00c3ff !important; /* Bright cyan/blue accent for dark mode */
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(0, 195, 255, 0.3) !important; /* Subtle glow for dark mode */
+}
+
+[data-theme='dark'] .header-open-book-button:hover {
+  background-color: #00d4ff !important; /* Slightly brighter for dark mode */
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 195, 255, 0.4) !important; /* Enhanced glow on hover in dark mode */
 }
 
 /* Card-like containers for features */

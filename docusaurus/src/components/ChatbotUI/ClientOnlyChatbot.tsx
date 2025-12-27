@@ -81,7 +81,8 @@ const ClientOnlyChatbot: React.FC = () => {
           session_id: CHATBOT_CONFIG.SESSION_PREFIX + Date.now().toString(),
           parameters: {
             top_k: 5,
-            threshold: 0.6
+            threshold: 0.6,
+            filters: null
           }
         })
       });
