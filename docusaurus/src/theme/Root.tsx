@@ -1,10 +1,9 @@
 import React from 'react';
-import { useIsBrowser } from '@docusaurus/theme-common';
 import ClientOnlyChatbot from '../components/ChatbotUI/ClientOnlyChatbot';
 
-// Root component with properly isolated client-side chatbot using Docusaurus useIsBrowser hook
+// Root component with properly isolated client-side chatbot using standard browser check
 const Root = ({ children }) => {
-  const isBrowser = useIsBrowser();
+  const isBrowser = typeof window !== 'undefined';
 
   return (
     <>

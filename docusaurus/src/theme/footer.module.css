@@ -11,6 +11,13 @@
   margin-top: auto !important;
 }
 
+/* Light mode specific styles */
+[data-theme='light'] .footer {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  color: #334155 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
 /* Ensure all text elements have high contrast */
 .footer h4,
 .footer .h4 {
@@ -20,6 +27,12 @@
   font-weight: 600;
   position: relative;
   display: inline-block;
+}
+
+/* Light mode h4 styles */
+[data-theme='light'] .footer h4,
+[data-theme='light'] .footer .h4 {
+  color: #475569 !important;
 }
 
 .footer h4::after {
@@ -32,6 +45,11 @@
   background: linear-gradient(90deg, #5e72e4, #8a8aff);
 }
 
+/* Light mode h4 after styles */
+[data-theme='light'] .footer h4::after {
+  background: linear-gradient(90deg, #3b82f6, #8a8aff);
+}
+
 .footer a,
 .footer .link {
   color: #93c5fd !important;
@@ -39,6 +57,12 @@
   position: relative;
   padding-bottom: 2px;
   transition: all 0.3s ease;
+}
+
+/* Light mode link styles */
+[data-theme='light'] .footer a,
+[data-theme='light'] .footer .link {
+  color: #2563eb !important;
 }
 
 .footer a::before {
@@ -52,9 +76,19 @@
   transition: width 0.3s ease;
 }
 
+/* Light mode link before styles */
+[data-theme='light'] .footer a::before {
+  background: linear-gradient(90deg, #3b82f6, #8a8aff);
+}
+
 .footer a:hover {
   color: #bfdbfe !important;
   transform: translateX(3px);
+}
+
+/* Light mode link hover styles */
+[data-theme='light'] .footer a:hover {
+  color: #1d4ed8 !important;
 }
 
 .footer a:hover::before {
@@ -68,12 +102,24 @@
   max-width: 300px;
 }
 
+/* Light mode paragraph styles */
+[data-theme='light'] .footer p,
+[data-theme='light'] .footer .aboutText {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
 .footer .copyright {
   color: rgba(255, 255, 255, 0.7) !important;
   padding-top: 3rem;
   margin-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
+}
+
+/* Light mode copyright styles */
+[data-theme='light'] .footer .copyright {
+  color: rgba(0, 0, 0, 0.7) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -123,8 +169,18 @@
   display: inline-block;
 }
 
+/* Light mode h4 styles */
+[data-theme='light'] .h4 {
+  color: #475569;
+}
+
 .aboutText {
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   max-width: 300px;
+}
+
+/* Light mode about text styles */
+[data-theme='light'] .aboutText {
+  color: rgba(0, 0, 0, 0.85);
 }

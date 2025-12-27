@@ -69,7 +69,7 @@ function ModuleCard({ title, description }: { title: string, description: string
   // Get an appropriate icon based on the title
   const getIcon = (title: string) => {
     switch(title) {
-      case "Module 1: ROS 2":
+      case "Module 1: Robotic Nervous System 2":
         return "📡";
       case "Module 2: Digital Twin":
         return "🏗️";

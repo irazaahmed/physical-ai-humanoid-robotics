@@ -1368,3 +1368,9 @@ NoneType: None
 2025-12-20 12:53:42,191 - retrieval_pipeline - INFO - All retrieval results passed validation checks
 2025-12-20 12:53:42,192 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
 2025-12-20 12:53:42,193 - retrieval_pipeline - INFO - Retrieval completed in 0.44ms, found 0 results
+2025-12-27 15:04:12,469 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-27 15:04:12,879 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-27 15:04:12,880 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-27 15:04:14,823 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-27 15:04:15,269 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-27 15:04:15,269 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully

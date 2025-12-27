@@ -8,7 +8,10 @@
       "Bash(npx docusaurus start --port 3012)",
       "Bash(npx docusaurus start --port 3013)",
       "Bash(npx docusaurus start --port 3014)",
-      "Bash(npx docusaurus start --port 3015)"
+      "Bash(npx docusaurus start --port 3015)",
+      "Bash(dir /s)",
+      "Bash(Get-ChildItem -Recurse)",
+      "Bash(touch \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\docs\\\\module2\\\\intro.md\")"
     ]
   }
 }

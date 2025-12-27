@@ -6,47 +6,53 @@
 
 @import url('./book-landing.css');
 
-/* You can override the default Infima variables here. */
+/* Modern AI/Robotics theme variables */
 :root {
-  --ifm-color-primary: #1a73e8;
-  --ifm-color-primary-dark: #1863cc;
-  --ifm-color-primary-darker: #1658bb;
-  --ifm-color-primary-darkest: #124799;
-  --ifm-color-primary-light: #3a86ec;
-  --ifm-color-primary-lighter: #4ca0ee;
-  --ifm-color-primary-lightest: #7fb7f2;
+  --ifm-color-primary: #00c3ff; /* Electric blue */
+  --ifm-color-primary-dark: #00a8e6;
+  --ifm-color-primary-darker: #0096d1;
+  --ifm-color-primary-darkest: #007db5;
+  --ifm-color-primary-light: #1ad1ff;
+  --ifm-color-primary-lighter: #33d6ff;
+  --ifm-color-primary-lightest: #66e2ff;
+  --ifm-color-secondary: #8a8aff; /* Neon purple */
+  --ifm-color-accent: #00ff9d; /* Neon teal */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 195, 255, 0.1);
 
   /* Additional custom colors for the textbook */
-  --textbook-primary: #1a73e8;
-  --textbook-secondary: #0d6efd;
-  --textbook-accent: #ff6b6b;
-  --textbook-background: #f8f9fa;
-  --textbook-dark: #212529;
-  --textbook-card-bg: #ffffff;
-  --textbook-border: #dee2e6;
+  --textbook-primary: #00c3ff;
+  --textbook-secondary: #8a8aff;
+  --textbook-accent: #00ff9d;
+  --textbook-background: #0a0a0a;
+  --textbook-dark: #e2e8f0;
+  --textbook-card-bg: #1a1a1a;
+  --textbook-border: #2d3748;
+  --textbook-hover: #2a2a2a;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #4dabf7;
-  --ifm-color-primary-dark: #339af0;
-  --ifm-color-primary-darker: #228be6;
-  --ifm-color-primary-darkest: #1c7ed6;
-  --ifm-color-primary-light: #74c0fc;
-  --ifm-color-primary-lighter: #91d1fc;
-  --ifm-color-primary-lightest: #b6e3ff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #00c3ff;
+  --ifm-color-primary-dark: #00a8e6;
+  --ifm-color-primary-darker: #0096d1;
+  --ifm-color-primary-darkest: #007db5;
+  --ifm-color-primary-light: #1ad1ff;
+  --ifm-color-primary-lighter: #33d6ff;
+  --ifm-color-primary-lightest: #66e2ff;
+  --ifm-color-secondary: #8a8aff;
+  --ifm-color-accent: #00ff9d;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 195, 255, 0.2);
 
   /* Dark mode custom colors */
-  --textbook-primary: #4dabf7;
-  --textbook-secondary: #339af0;
-  --textbook-accent: #ff8787;
-  --textbook-background: #121212;
-  --textbook-dark: #f8f9fa;
-  --textbook-card-bg: #1e1e1e;
-  --textbook-border: #404040;
+  --textbook-primary: #00c3ff;
+  --textbook-secondary: #8a8aff;
+  --textbook-accent: #00ff9d;
+  --textbook-background: #0a0a0a;
+  --textbook-dark: #e2e8f0;
+  --textbook-card-bg: #1a1a1a;
+  --textbook-border: #2d3748;
+  --textbook-hover: #2a2a2a;
 }
 
 /* Enhanced button styles */
@@ -66,75 +72,305 @@
   color: white !important;
   border: none !important;
   padding: 8px 16px !important;
-  border-radius: 4px !important;
-  font-weight: bold !important;
-  transition: background-color 0.3s ease !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(0, 195, 255, 0.3) !important;
 }
 
 .header-open-book-button:hover {
   background-color: var(--ifm-color-primary-dark) !important;
   color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 195, 255, 0.4) !important;
 }
 
 /* Card-like containers for features */
 .feature-card {
   background: var(--textbook-card-bg);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
+  border: 1px solid rgba(0, 195, 255, 0.1);
 }
 
 [data-theme='dark'] .feature-card {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 40px -10px rgba(0, 195, 255, 0.2),
+    0 0 0 1px rgba(0, 195, 255, 0.3),
+    0 0 30px rgba(0, 195, 255, 0.1);
+  border-color: rgba(0, 195, 255, 0.3);
 }
 
 [data-theme='dark'] .feature-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 20px 40px -10px rgba(0, 195, 255, 0.2),
+    0 0 0 1px rgba(0, 195, 255, 0.3),
+    0 0 30px rgba(0, 195, 255, 0.1);
 }
 
 /* Hero banner enhancement */
 .hero--primary {
-  background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(0, 195, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(138, 138, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 50% 50%, rgba(0, 123, 255, 0.05) 0%, transparent 30%);
+  z-index: 0;
+}
+
+.hero--primary > div {
+  position: relative;
+  z-index: 1;
 }
 
 /* Dark mode adjustments */
 [data-theme='dark'] .hero--primary {
-  background: linear-gradient(135deg, #1b263b 0%, #2c3e50 100%);
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
 }
 
 /* Sidebar enhancements */
-.menu__list-item-collapsible,
-.menu__link {
-  transition: all 0.2s ease;
+.menu {
+  background: var(--textbook-card-bg) !important;
+  border-right: 1px solid var(--textbook-border) !important;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.sidebar {
+  background: var(--textbook-card-bg) !important;
+  border-right: 1px solid var(--textbook-border) !important;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Module items - visually distinct from chapters */
+.menu__list-item {
+  margin: 0.5rem 0 !important;
+  padding: 0 !important;
+}
+
+/* Module headers - distinct from chapters */
+.menu__list-item > .menu__list-item-collapsible > .menu__link,
+.menu__list-item-collapsible > .menu__link {
+  padding: 0.8rem 1.2rem !important;
+  border-radius: 8px !important;
+  margin: 0 0.75rem !important;
+  transition: all 0.2s ease !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  font-size: 0.95rem !important; /* Reduced font size to prevent truncation */
+  font-weight: 500 !important; /* Slightly bold but not too much */
+  color: var(--textbook-secondary) !important;
+  position: relative !important;
+  text-align: left !important; /* Left aligned */
+}
+
+/* Module header accent indicator on the LEFT side */
+.menu__list-item > .menu__list-item-collapsible > .menu__link::before,
+.menu__list-item-collapsible > .menu__link::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 3px !important;
+  background: var(--ifm-color-secondary) !important;
+  border-radius: 2px 0 0 2px !important;
+}
+
+/* Module header active state */
+.menu__list-item > .menu__list-item-collapsible > .menu__link--active,
+.menu__list-item-collapsible > .menu__link--active {
+  background: rgba(138, 138, 255, 0.05) !important;
+  color: var(--ifm-color-secondary) !important;
+  font-weight: 500 !important;
+}
+
+/* Chapter items - indented to the RIGHT */
+.menu__list-item .menu__list-item .menu__link {
+  padding: 0.7rem 1.2rem 0.7rem 2.0rem !important; /* Indented to the right by 2.0rem */
+  margin: 0 0.75rem !important;
+  font-size: 0.9rem !important; /* Slightly smaller font */
+  font-weight: 400 !important; /* Normal font weight */
+  color: var(--textbook-dark) !important;
+  border-radius: 6px !important;
+  text-align: left !important; /* Left aligned */
+  background: transparent !important;
+}
+
+/* Chapter active state */
+.menu__list-item .menu__list-item .menu__link--active {
+  background: rgba(0, 195, 255, 0.08) !important;
+  color: var(--ifm-color-primary) !important;
+  font-weight: 400 !important; /* Normal weight for chapters */
+}
+
+.menu__list-item > a,
+.menu__list-item-collapsible {
+  padding: 0.8rem 1.2rem !important;
+  border-radius: 8px !important;
+  margin: 0 0.75rem !important;
+  transition: all 0.2s ease !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+}
+
+.menu__list-item > a:hover,
+.menu__list-item-collapsible:hover {
+  background: var(--textbook-hover) !important;
+  border-color: rgba(0, 195, 255, 0.2) !important;
+  transform: translateX(4px) !important;
 }
 
 .menu__link--active:not(.menu__link--external) {
-  background-color: rgba(26, 115, 232, 0.1);
-  border-left: 3px solid var(--ifm-color-primary);
+  background: linear-gradient(90deg, rgba(0, 195, 255, 0.15), transparent) !important;
+  border-left: 3px solid var(--ifm-color-primary) !important;
+  color: var(--ifm-color-primary) !important;
+  font-weight: 600 !important;
+  transform: translateX(4px) !important;
+}
+
+.menu__list-item-collapsible .menu__link--active {
+  background: linear-gradient(90deg, rgba(0, 195, 255, 0.15), transparent) !important;
+  border-left: 3px solid var(--ifm-color-primary) !important;
+  color: var(--ifm-color-primary) !important;
+  font-weight: 600 !important;
+}
+
+.menu__list-item-collapsible {
+  border-radius: 8px !important;
+}
+
+.menu__list-item-collapsible:hover {
+  background: var(--textbook-hover) !important;
+  border-color: rgba(0, 195, 255, 0.2) !important;
+}
+
+/* Spacing between modules and chapters */
+.menu__list .menu__list-item:not(:first-child) {
+  margin-top: 0.25rem !important;
+}
+
+.menu__list .menu__list-item .menu__list {
+  margin-top: 0.25rem !important;
+  padding-top: 0.25rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Light mode specific styles */
+:root[data-theme='light'] {
+  --ifm-color-primary: #0077ff;
+  --ifm-color-primary-dark: #0069e6;
+  --ifm-color-primary-darker: #0062d9;
+  --ifm-color-primary-darkest: #0052b5;
+  --ifm-color-primary-light: #1a8cff;
+  --ifm-color-primary-lighter: #3399ff;
+  --ifm-color-primary-lightest: #66b3ff;
+  --ifm-color-secondary: #6a5acd;
+  --ifm-color-accent: #00a87d;
+
+  --textbook-primary: #0077ff;
+  --textbook-secondary: #6a5acd;
+  --textbook-accent: #00a87d;
+  --textbook-background: #f8fafc;
+  --textbook-dark: #2d3748;
+  --textbook-card-bg: #ffffff;
+  --textbook-border: #e2e8f0;
+  --textbook-hover: #f7fafc;
+}
+
+/* Light mode sidebar specific */
+[data-theme='light'] .menu,
+[data-theme='light'] .sidebar {
+  background: var(--textbook-card-bg) !important;
+  border-right: 1px solid var(--textbook-border) !important;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Light mode module headers */
+[data-theme='light'] .menu__list-item > .menu__list-item-collapsible > .menu__link,
+[data-theme='light'] .menu__list-item-collapsible > .menu__link {
+  color: var(--textbook-secondary) !important;
+}
+
+/* Light mode module header accent indicator */
+[data-theme='light'] .menu__list-item > .menu__list-item-collapsible > .menu__link::before,
+[data-theme='light'] .menu__list-item-collapsible > .menu__link::before {
+  background: var(--ifm-color-secondary) !important;
+}
+
+/* Light mode module header active state */
+[data-theme='light'] .menu__list-item > .menu__list-item-collapsible > .menu__link--active,
+[data-theme='light'] .menu__list-item-collapsible > .menu__link--active {
+  background: rgba(106, 90, 205, 0.05) !important;
+  color: var(--ifm-color-secondary) !important;
+}
+
+/* Light mode chapter items */
+[data-theme='light'] .menu__list-item .menu__list-item .menu__link {
+  color: var(--textbook-dark) !important;
+}
+
+/* Light mode chapter active state */
+[data-theme='light'] .menu__list-item .menu__list-item .menu__link--active {
+  background: rgba(0, 119, 255, 0.08) !important;
+  color: var(--ifm-color-primary) !important;
+}
+
+[data-theme='light'] .menu__list .menu__list-item .menu__list {
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Light mode hover states */
+[data-theme='light'] .menu__list-item > a:hover,
+[data-theme='light'] .menu__list-item-collapsible:hover {
+  background: var(--textbook-hover) !important;
+  border-color: rgba(0, 119, 255, 0.2) !important;
+}
+
+[data-theme='light'] .menu__list-item-collapsible:hover {
+  background: var(--textbook-hover) !important;
+  border-color: rgba(0, 119, 255, 0.2) !important;
 }
 
 /* Code block enhancements */
 .prism-code {
-  border-radius: 8px;
+  border-radius: 12px !important;
+  background: var(--textbook-card-bg) !important;
+  border: 1px solid var(--textbook-border) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Table styling */
 .table {
-  border: 1px solid var(--textbook-border);
-  border-radius: 8px;
-  overflow: hidden;
+  border: 1px solid var(--textbook-border) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: var(--textbook-card-bg) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
 .table th,
 .table td {
-  border-color: var(--textbook-border);
+  border-color: var(--textbook-border) !important;
+  padding: 0.75rem 1rem !important;
 }
 
 /* Improved typography */
@@ -142,5 +378,255 @@
 .markdown h2,
 .markdown h3,
 .markdown h4 {
-  font-weight: 600;
+  font-weight: 700 !important;
+  color: var(--ifm-color-primary) !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  position: relative !important;
+}
+
+.markdown h1::after,
+.markdown h2::after,
+.markdown h3::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -8px !important;
+  left: 0 !important;
+  width: 50px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, var(--ifm-color-primary), transparent) !important;
+  border-radius: 2px !important;
+}
+
+.markdown h1 {
+  font-size: 2.5rem !important;
+}
+
+.markdown h2 {
+  font-size: 2rem !important;
+}
+
+.markdown h3 {
+  font-size: 1.5rem !important;
+}
+
+.markdown p {
+  line-height: 1.8 !important;
+  color: var(--textbook-dark) !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.markdown a {
+  color: var(--ifm-color-primary) !important;
+  text-decoration: none !important;
+  position: relative !important;
+}
+
+.markdown a::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: var(--ifm-color-primary) !important;
+  transform: scaleX(0) !important;
+  transform-origin: left !important;
+  transition: transform 0.3s ease !important;
+}
+
+.markdown a:hover::after {
+  transform: scaleX(1) !important;
+}
+
+/* Content area enhancements */
+.docItemContainer,
+.container {
+  max-width: 100% !important;
+  padding: 0 2rem !important;
+}
+
+.main-wrapper {
+  background: var(--textbook-background) !important;
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 4px solid var(--ifm-color-primary) !important;
+  background: var(--textbook-card-bg) !important;
+  border-radius: 0 8px 8px 0 !important;
+  padding: 1rem 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+}
+
+blockquote::before {
+  content: 'ℹ️' !important;
+  position: absolute !important;
+  top: 1rem !important;
+  left: -12px !important;
+  background: var(--ifm-color-primary) !important;
+  color: white !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.8rem !important;
+}
+
+/* List styling */
+.markdown ul,
+.markdown ol {
+  padding-left: 1.5rem !important;
+  margin: 1rem 0 !important;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem !important;
+  position: relative !important;
+}
+
+.markdown li::marker {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Custom font for tech/ai aesthetic */
+html {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--textbook-background) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary) !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary-dark) !important;
+}
+
+/* Enhanced navigation */
+.navbar {
+  background: rgba(10, 10, 10, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(0, 195, 255, 0.1) !important;
+}
+
+/* Light mode navbar styles */
+[data-theme='light'] .navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #2d3748 !important;
+}
+
+[data-theme='light'] .navbar__brand {
+  color: #2d3748 !important;
+}
+
+[data-theme='light'] .navbar__brand strong {
+  color: #2d3748 !important;
+}
+
+[data-theme='light'] .navbar__title {
+  color: #2d3748 !important;
+}
+
+[data-theme='light'] .navbar__link {
+  color: #475569 !important;
+}
+
+[data-theme='light'] .navbar__link:hover {
+  color: #2563eb !important;
+}
+
+[data-theme='light'] .navbar__link--active {
+  color: #2563eb !important;
+}
+
+[data-theme='light'] .navbar__item {
+  color: #475569 !important;
+}
+
+[data-theme='light'] .navbar__item:hover {
+  color: #2563eb !important;
+}
+
+/* Theme dropdown in light mode */
+[data-theme='light'] .navbar__items .navbar__item:last-child .navbar__link {
+  color: #475569 !important;
+}
+
+[data-theme='light'] .navbar-sidebar__brand {
+  background: white !important;
+  color: #2d3748 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme='light'] .navbar-sidebar__items {
+  background: white !important;
+  color: #2d3748 !important;
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Pagination styling */
+.pagination-nav__link {
+  background: var(--textbook-card-bg) !important;
+  border: 1px solid var(--textbook-border) !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary) !important;
+  box-shadow: 0 6px 20px rgba(0, 195, 255, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+.pagination-nav__label {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Admonitions */
+.alert {
+  border-radius: 12px !important;
+  border: 1px solid var(--textbook-border) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.alert--info {
+  border-left-color: var(--ifm-color-primary) !important;
+}
+
+.alert--success {
+  border-left-color: var(--ifm-color-accent) !important;
+}
+
+.alert--warning {
+  border-left-color: #ffd166 !important;
+}
+
+.alert--danger {
+  border-left-color: #ef476f !important;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%) !important;
+  border-top: 1px solid rgba(0, 195, 255, 0.1) !important;
 }

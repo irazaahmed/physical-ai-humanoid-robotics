@@ -160,45 +160,6 @@ class EmbeddingPipeline:
 def main():
     """Main function to run the embedding pipeline"""
     try:
-        # Initialize the pipeline
-        pipeline = EmbeddingPipeline()
-
-        # Validate that URLs are set in config
-        if not Config.TEXTBOOK_BASE_URL:
-            logger.error("TEXTBOOK_BASE_URL not set in configuration")
-            return False
-
-        # Fetch documentation URLs from the sitemap
-        logger.info("Fetching documentation URLs from sitemap...")
-        urls = fetch_sitemap_urls()
-
-        if not urls:
-            logger.error("No documentation URLs found in sitemap")
-            return False
-
-        # Filter out any duplicate URLs
-        unique_urls = filter_unique_urls(urls)
-
-        logger.info(f"Starting pipeline for {len(unique_urls)} unique documentation URLs")
-
-        # Run the pipeline with the sitemap-derived URLs
-        success = pipeline.run_pipeline(unique_urls)
-
-        if success:
-            logger.info("Embedding pipeline completed successfully!")
-            return True
-        else:
-            logger.error("Embedding pipeline failed!")
-            return False
-
-    except Exception as e:
-        logger.error(f"Error running pipeline: {str(e)}", exc_info=True)
-        return False
-
-
-def main():
-    """Main function to run the embedding pipeline"""
-    try:
         # Check if we should start the agent service
         if os.getenv("START_AGENT_SERVICE", "false").lower() == "true":
             # Start the agent service

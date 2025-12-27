@@ -78,7 +78,11 @@ const ClientOnlyChatbot: React.FC = () => {
         },
         body: JSON.stringify({
           query: inputValue,
-          session_id: CHATBOT_CONFIG.SESSION_PREFIX + Date.now().toString()
+          session_id: CHATBOT_CONFIG.SESSION_PREFIX + Date.now().toString(),
+          parameters: {
+            top_k: 5,
+            threshold: 0.6
+          }
         })
       });
 
@@ -107,7 +111,7 @@ const ClientOnlyChatbot: React.FC = () => {
       // Add error message to the conversation
       const errorMessage: Message = {
         id: Date.now().toString(),
-        content: 'Sorry, I encountered an issue processing your request. Please make sure the backend service is running.',
+        content: 'Sorry, I\'m having trouble connecting right now. Please check that the backend service is running.',
         role: 'assistant',
         timestamp: new Date(),
       };
@@ -130,7 +134,7 @@ const ClientOnlyChatbot: React.FC = () => {
     <>
       {/* Floating button */}
       {!isOpen && (
-        <div
+        <button
           id="chatbot-fab"
           onClick={toggleChat}
           aria-label="Open AI Assistant"
@@ -154,9 +158,10 @@ const ClientOnlyChatbot: React.FC = () => {
             border: 'none',
             userSelect: 'none',
             transition: 'all 0.3s ease',
-            fontFamily: 'inherit',
+            fontFamily: '-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Oxygen, Ubuntu, Cantarell, \'Open Sans\', \'Helvetica Neue\', sans-serif',
             textAlign: 'center',
-            lineHeight: '1'
+            lineHeight: '1',
+            padding: 0
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)';
@@ -168,7 +173,7 @@ const ClientOnlyChatbot: React.FC = () => {
           }}
         >
           💬
-        </div>
+        </button>
       )}
 
       {/* Chat window */}
@@ -179,51 +184,65 @@ const ClientOnlyChatbot: React.FC = () => {
             position: 'fixed',
             bottom: '90px',
             right: '20px',
-            width: '380px',
-            height: '500px',
-            maxWidth: 'calc(100vw - 40px)',
-            maxHeight: 'calc(100vh - 120px)',
-            backgroundColor: 'white',
-            borderRadius: '12px',
-            boxShadow: '0 8px 30px rgba(0, 0, 0, 0.2)',
+            width: '400px',
+            height: '550px',
+            maxWidth: 'calc(100vw - 20px)',
+            maxHeight: 'calc(100vh - 40px)',
+            backgroundColor: '#ffffff',
+            borderRadius: '16px',
+            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.15)',
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
             zIndex: '1001',
             fontFamily: '-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Oxygen, Ubuntu, Cantarell, \'Open Sans\', \'Helvetica Neue\', sans-serif',
-            border: '1px solid #dee2e6'
+            border: '1px solid #e9ecef'
           }}
         >
           {/* Header */}
           <div
             className="chatbot-header"
             style={{
-              padding: '16px',
+              padding: '16px 20px',
               backgroundColor: '#f8f9fa',
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              borderBottom: '1px solid #dee2e6'
+              borderBottom: '1px solid #e9ecef'
             }}
           >
-            <h3 style={{
-              margin: 0,
-              fontSize: '1.1rem',
-              color: '#212529',
-              fontWeight: 600
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
             }}>
-              AI Assistant
-            </h3>
+              <div style={{
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                backgroundColor: '#28a745',
+                boxShadow: '0 0 6px rgba(40, 167, 69, 0.5)'
+              }}></div>
+              <h3 style={{
+                margin: 0,
+                fontSize: '1.1rem',
+                color: '#212529',
+                fontWeight: 600
+              }}>
+                AI Assistant
+              </h3>
+            </div>
             <button
               onClick={closeChat}
+              aria-label="Close chat"
               style={{
                 background: 'none',
                 border: 'none',
-                fontSize: '1.5rem',
+                fontSize: '1.25rem',
                 cursor: 'pointer',
                 color: '#6c757d',
-                width: '32px',
-                height: '32px',
+                width: '36px',
+                height: '36px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -250,11 +269,11 @@ const ClientOnlyChatbot: React.FC = () => {
             className="chat-messages"
             style={{
               flex: 1,
-              padding: '16px',
+              padding: '20px',
               overflowY: 'auto',
               display: 'flex',
               flexDirection: 'column',
-              gap: '10px',
+              gap: '15px',
               backgroundColor: '#ffffff'
             }}
           >
@@ -265,21 +284,53 @@ const ClientOnlyChatbot: React.FC = () => {
                 style={{
                   display: 'flex',
                   justifyContent: message.role === 'user' ? 'flex-end' : 'flex-start',
-                  marginBottom: '10px'
+                  marginBottom: '0'
                 }}
               >
                 <div
                   className={`message-bubble ${message.role}`}
                   style={{
-                    padding: '8px 12px',
-                    borderRadius: '18px',
-                    maxWidth: '80%',
+                    padding: '12px 16px',
+                    borderRadius: '20px',
+                    maxWidth: '85%',
                     wordWrap: 'break-word',
-                    backgroundColor: message.role === 'user' ? '#e3f2fd' : '#f5f5f5',
-                    color: message.role === 'user' ? '#1a73e8' : '#212529'
+                    backgroundColor: message.role === 'user' ? '#007bff' : '#f8f9fa',
+                    color: message.role === 'user' ? '#ffffff' : '#212529',
+                    boxShadow: message.role === 'user'
+                      ? '0 2px 8px rgba(0, 123, 255, 0.2)'
+                      : '0 2px 4px rgba(0, 0, 0, 0.05)',
+                    border: message.role === 'assistant' ? '1px solid #e9ecef' : 'none',
+                    fontSize: '0.95rem',
+                    lineHeight: '1.4'
                   }}
                 >
-                  {message.content}
+                  {message.content === 'Thinking...' && message.role === 'assistant' ? (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <div style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: '#6c757d',
+                        animation: 'pulse 1.5s infinite'
+                      }}></div>
+                      <div style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: '#6c757d',
+                        animation: 'pulse 1.5s infinite 0.3s'
+                      }}></div>
+                      <div style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: '#6c757d',
+                        animation: 'pulse 1.5s infinite 0.6s'
+                      }}></div>
+                    </div>
+                  ) : (
+                    message.content
+                  )}
                 </div>
               </div>
             ))}
@@ -290,13 +341,16 @@ const ClientOnlyChatbot: React.FC = () => {
           <div
             className="chat-input-area"
             style={{
-              padding: '16px',
-              backgroundColor: '#f8f9fa',
-              borderTop: '1px solid #dee2e6'
+              padding: '16px 20px',
+              backgroundColor: '#ffffff',
+              borderTop: '1px solid #e9ecef'
             }}
           >
-            <div
-              className="input-container"
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSendMessage();
+              }}
               style={{
                 display: 'flex',
                 gap: '10px'
@@ -311,41 +365,87 @@ const ClientOnlyChatbot: React.FC = () => {
                 rows={1}
                 style={{
                   flex: 1,
-                  padding: '10px',
+                  padding: '12px 16px',
                   border: '1px solid #ced4da',
-                  borderRadius: '18px',
+                  borderRadius: '20px',
                   resize: 'none',
-                  fontSize: '14px',
+                  fontSize: '0.95rem',
                   fontFamily: 'inherit',
-                  minHeight: '40px',
-                  maxHeight: '100px',
-                  outline: 'none'
+                  minHeight: '46px',
+                  maxHeight: '120px',
+                  outline: 'none',
+                  backgroundColor: '#ffffff',
+                  color: '#212529',
+                  transition: 'border-color 0.2s'
+                }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = '#007bff';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = '#ced4da';
                 }}
                 onInput={(e) => {
                   const target = e.target as HTMLTextAreaElement;
                   target.style.height = 'auto';
-                  target.style.height = Math.min(target.scrollHeight, 100) + 'px';
+                  target.style.height = Math.min(target.scrollHeight, 120) + 'px';
                 }}
               />
               <button
-                onClick={handleSendMessage}
+                type="submit"
                 disabled={isLoading || !inputValue.trim()}
+                aria-label="Send message"
                 style={{
-                  width: '50px',
-                  height: '40px',
-                  padding: '8px',
+                  width: '46px',
+                  height: '46px',
+                  padding: '0',
                   border: 'none',
-                  borderRadius: '4px',
-                  backgroundColor: isLoading || !inputValue.trim() ? '#ccc' : '#1a73e8',
+                  borderRadius: '50%',
+                  backgroundColor: isLoading || !inputValue.trim() ? '#adb5bd' : '#007bff',
                   color: 'white',
                   cursor: isLoading || !inputValue.trim() ? 'not-allowed' : 'pointer',
-                  fontFamily: 'inherit'
+                  fontFamily: 'inherit',
+                  fontSize: '1.1rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'background-color 0.2s'
+                }}
+                onMouseEnter={(e) => {
+                  if (!isLoading && inputValue.trim()) {
+                    e.currentTarget.style.backgroundColor = '#0069d9';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isLoading && inputValue.trim()) {
+                    e.currentTarget.style.backgroundColor = '#007bff';
+                  }
                 }}
               >
-                {isLoading ? '...' : 'Send'}
+                {isLoading ? (
+                  <div style={{
+                    width: '12px',
+                    height: '12px',
+                    borderTop: '2px solid white',
+                    borderRight: '2px solid white',
+                    borderRadius: '50%',
+                    animation: 'spin 1s linear infinite'
+                  }}></div>
+                ) : '➤'}
               </button>
-            </div>
+            </form>
           </div>
+
+          <style jsx>{`
+            @keyframes pulse {
+              0%, 100% { opacity: 1; }
+              50% { opacity: 0.4; }
+            }
+
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          `}</style>
         </div>
       )}
     </>

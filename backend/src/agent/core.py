@@ -39,6 +39,9 @@ class Agent:
         # Initialize tools
         self.retrieval_tool = RetrievalTool()
 
+        # Initialize session storage
+        self.sessions = {}
+
         logger.info(f"Agent initialized with Google Gemini model: {Config.GEMINI_MODEL}")
     
     def process_query(self, user_query: str, session_id: Optional[str] = None) -> AgentResponse:
@@ -61,6 +64,22 @@ class Agent:
         try:
             logger.info(f"Processing query: '{user_query[:100]}{'...' if len(user_query) > 100 else ''}'")
 
+            # Get conversation history if session is provided
+            conversation_context = ""
+            if session_id:
+                if session_id not in self.sessions:
+                    self.sessions[session_id] = []
+
+                # Add current query to session context
+                session_context = self.sessions[session_id]
+                # Limit context window to prevent memory bloat
+                recent_context = session_context[-3:]  # Last 3 exchanges
+
+                if recent_context:
+                    conversation_context = "\n\nPrevious conversation:\n"
+                    for exchange in recent_context:
+                        conversation_context += f"Q: {exchange['query']}\nA: {exchange['response'][:200]}...\n\n"
+
             # Step 1: Retrieve relevant content
             retrieval_result = self.retrieval_tool.call_retrieval(
                 query=user_query,
@@ -81,30 +100,36 @@ class Agent:
                     chapter=metadata.get("chapter", ""),
                     section=metadata.get("section", ""),
                     similarity_score=chunk.get("similarity_score", 0.0),
-                    content_preview=chunk["content"][:100] + "..."
+                    content_preview=chunk["content"][:100] + "...",
+                    url_fragment=metadata.get("url_fragment", ""),
+                    page_reference=metadata.get("page_reference", "")
                 )
                 sources.append(source)
                 retrieved_content.append(chunk["content"])
 
-            # Step 2: Formulate prompt with retrieved content and user query
+            # Step 2: Formulate prompt with retrieved content, conversation context and user query
             if retrieved_content:
                 context = "\n\n".join(retrieved_content)
                 prompt = f"""
                 You are an expert agent specializing in Physical AI & Humanoid Robotics.
                 Answer the user's query based on the provided context from the textbook content.
+                Consider the previous conversation context if provided.
 
                 Context:
                 {context}
 
+                {conversation_context}
                 User Query: {user_query}
 
                 Provide a comprehensive and accurate answer based on the context.
                 If the context doesn't contain enough information to answer the query,
                 clearly state that the information is not available in the provided context.
+                Include specific citations to textbook sections when possible.
                 """
             else:
                 # If no relevant content found, generate a response indicating this
                 prompt = f"""
+                {conversation_context}
                 The user asked: {user_query}
 
                 The system could not find any relevant content in the textbook to answer this query.
@@ -143,6 +168,17 @@ class Agent:
                 timestamp=datetime.utcnow(),
                 processing_time_ms=processing_time
             )
+
+            # Store the exchange in session history if session_id provided
+            if session_id:
+                self.sessions[session_id].append({
+                    'query': user_query,
+                    'response': agent_response,
+                    'timestamp': datetime.utcnow()
+                })
+                # Limit session history to prevent memory bloat
+                if len(self.sessions[session_id]) > 10:
+                    self.sessions[session_id] = self.sessions[session_id][-10:]
 
             logger.info(f"Query processed successfully in {processing_time:.2f}ms")
             return response_obj
@@ -414,7 +450,9 @@ class Agent:
                         chapter=metadata.get("chapter", ""),
                         section=metadata.get("section", ""),
                         similarity_score=chunk.get("similarity_score", 0.0),
-                        content_preview=chunk["content"][:100] + "..."
+                        content_preview=chunk["content"][:100] + "...",
+                        url_fragment=metadata.get("url_fragment", ""),
+                        page_reference=metadata.get("page_reference", "")
                     )
                     sources.append(source)
                     retrieved_content.append(chunk["content"])
@@ -475,19 +513,19 @@ class Agent:
             raise QueryProcessingError(f"Failed to process simple query: {str(e)}") from e
 
 
-# Global agent instance
-# In a production system, this would be managed differently to avoid global state
-agent_instance = None
+import threading
+
+# Thread-local storage to avoid global state issues
+_local = threading.local()
 
 
 def get_agent() -> Agent:
     """
-    Get the global agent instance, creating it if it doesn't exist.
-    
+    Get the agent instance for the current thread, creating it if it doesn't exist.
+
     Returns:
         Agent instance
     """
-    global agent_instance
-    if agent_instance is None:
-        agent_instance = Agent()
-    return agent_instance
+    if not hasattr(_local, 'agent'):
+        _local.agent = Agent()
+    return _local.agent

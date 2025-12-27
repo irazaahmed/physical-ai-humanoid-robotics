@@ -30,6 +30,7 @@ from .validation_utils import validate_query_request, validate_chat_request
 from .rate_limiter import apply_rate_limit
 from .config import Config
 from .logging import logger, log_request, log_response, handle_error
+from .cache import query_cache
 from datetime import datetime
 import time
 import uuid
@@ -65,11 +66,62 @@ async def query_endpoint(request: Request, query_request: QueryRequest = Depends
                 }
             )
 
+        # Check cache first (using a default session for non-conversational queries)
+        session_id = f"query_session_{str(uuid.uuid4())}"
+        cached_response = query_cache.get(query_request.query, session_id)
+        if cached_response:
+            logger.info(f"Cache hit for query: '{query_request.query[:50]}...'")
+
+            # Prepare cached response
+            result = QueryResponse(
+                result_id=cached_response.query_id,
+                query=query_request.query,
+                results=[],  # We'll populate this based on the agent's internal retrieval
+                search_parameters={
+                    "k": str(query_request.parameters.top_k),
+                    "threshold": str(query_request.parameters.threshold),
+                    "distance_metric": "cosine"
+                },
+                execution_time_ms=0,  # Cached response
+                timestamp=datetime.utcnow()
+            )
+
+            # Since the agent handles retrieval internally, we'll return the information differently
+            # For the query endpoint, we'll return the sources found as results
+            for source in cached_response.sources:
+                # Note: In a full implementation, we would map the agent's sources to RetrievedChunk format
+                # For now, we'll create a basic chunk representation
+                from .models import RetrievedChunk
+                chunk = RetrievedChunk(
+                    id=str(uuid.uuid4()),
+                    content=source.content_preview,
+                    similarity_score=source.similarity_score,
+                    rank=0,  # Would be determined by the retrieval ranking
+                    metadata={
+                        "url": source.url,
+                        "module": source.module,
+                        "chapter": source.chapter,
+                        "section": source.section,
+                        "chunk_index": 0,  # Placeholder
+                        "hash": "",  # Placeholder
+                        "url_fragment": getattr(source, 'url_fragment', ''),
+                        "page_reference": getattr(source, 'page_reference', '')
+                    }
+                )
+                result.results.append(chunk)
+
+            # Log the response
+            log_response(cached_response.content, 0, cached_response.sources)
+            return result
+
         # Get the agent instance
         agent = get_agent()
 
         # Process the query using the agent's simple processing function
         response = agent.process_simple_query(query_request.query)
+
+        # Cache the response
+        query_cache.set(query_request.query, session_id, response)
 
         # Calculate execution time
         execution_time = (time.time() - start_time) * 1000  # Convert to milliseconds
@@ -105,7 +157,9 @@ async def query_endpoint(request: Request, query_request: QueryRequest = Depends
                     "chapter": source.chapter,
                     "section": source.section,
                     "chunk_index": 0,  # Placeholder
-                    "hash": ""  # Placeholder
+                    "hash": "",  # Placeholder
+                    "url_fragment": getattr(source, 'url_fragment', ''),
+                    "page_reference": getattr(source, 'page_reference', '')
                 }
             )
             result.results.append(chunk)
@@ -138,8 +192,11 @@ async def chat_endpoint(request: Request, chat_request: ChatRequest = Depends())
     start_time = time.time()
 
     try:
+        # Generate session ID if not provided
+        session_id = chat_request.session_id or f"session_{str(uuid.uuid4())}"
+
         # Log the incoming request
-        log_request(chat_request.query, chat_request.session_id)
+        log_request(chat_request.query, session_id)
 
         # Validate the request
         validation_errors = validate_chat_request(chat_request)
@@ -154,11 +211,34 @@ async def chat_endpoint(request: Request, chat_request: ChatRequest = Depends())
                 }
             )
 
+        # Check cache first
+        cached_response = query_cache.get(chat_request.query, session_id)
+        if cached_response:
+            logger.info(f"Cache hit for query: '{chat_request.query[:50]}...'")
+
+            # Prepare cached response
+            chat_response = ChatResponse(
+                response_id=cached_response.id,
+                query=chat_request.query,
+                answer=cached_response.content,
+                sources=cached_response.sources,
+                confidence_score=cached_response.confidence_score,
+                processing_time_ms=0,  # Cached response
+                timestamp=datetime.utcnow()
+            )
+
+            # Log the response
+            log_response(cached_response.content, 0, cached_response.sources)
+            return chat_response
+
         # Get the agent instance
         agent = get_agent()
 
         # Process the query using the agent
-        response = agent.process_query(chat_request.query, chat_request.session_id)
+        response = agent.process_query(chat_request.query, session_id)
+
+        # Cache the response
+        query_cache.set(chat_request.query, session_id, response)
 
         # Calculate execution time
         execution_time = (time.time() - start_time) * 1000  # Convert to milliseconds

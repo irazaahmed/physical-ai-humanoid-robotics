@@ -8,6 +8,8 @@ from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 from enum import Enum
+import time
+import uuid
 
 
 class UserQuery(BaseModel):
@@ -55,6 +57,8 @@ class Source(BaseModel):
     section: str = Field(..., description="Section title of the content")
     similarity_score: float = Field(..., ge=0.0, le=1.0, description="Similarity score of the source")
     content_preview: str = Field(..., description="Preview of the content used")
+    url_fragment: Optional[str] = Field(None, description="URL fragment/anchor for direct linking to specific content")
+    page_reference: Optional[str] = Field(None, description="Specific page or section reference in the textbook")
 
 
 class AgentResponse(BaseModel):
