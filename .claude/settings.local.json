@@ -11,7 +11,23 @@
       "Bash(npx docusaurus start --port 3015)",
       "Bash(dir /s)",
       "Bash(Get-ChildItem -Recurse)",
-      "Bash(touch \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\docs\\\\module2\\\\intro.md\")"
+      "Bash(touch \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\docs\\\\module2\\\\intro.md\")",
+      "Bash(del \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\src\\\\theme\\\\DocSidebar.tsx\")",
+      "Bash(Get-ChildItem \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\src\\\\theme\"\" -Filter \"*.tsx \")",
+      "Bash(Where-Object {$_Length -eq 0})",
+      "Bash(Remove-Item)",
+      "Bash(npx docusaurus start --port 3002)",
+      "Bash(npx docusaurus start --port 3003)",
+      "Bash(npx docusaurus start --port 3004)",
+      "Bash(dir \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\src\\\\theme\" /s)",
+      "Bash(npx docusaurus start --port 3005)",
+      "Bash(curl -s \"http://localhost:3005/docs/module1/intro\")",
+      "Bash(curl -s \"http://localhost:3005/\")",
+      "Bash(del \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\src\\\\theme\\\\DocSidebar.tsx\" \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\src\\\\theme\\\\DocSidebarItem.tsx\" \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\src\\\\theme\\\\DocSidebarItemCategory.tsx\" \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\docusaurus\\\\src\\\\theme\\\\DocSidebarItemLink.tsx\")",
+      "Bash(npx docusaurus build)",
+      "Bash(curl -I \"http://localhost:3006/docs/module1/intro\")",
+      "Bash(curl -I http://localhost:3007/)",
+      "Bash(curl -I http://localhost:3008/)"
     ]
   }
 }

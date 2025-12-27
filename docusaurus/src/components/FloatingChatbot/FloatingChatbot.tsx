@@ -26,8 +26,8 @@ const FloatingChatbot: React.FC = () => {
         position: 'fixed',
         bottom: '20px',
         right: '20px',
-        width: '60px',
-        height: '60px',
+        width: '55px',
+        height: '55px',
         borderRadius: '50%',
         backgroundColor: '#1a73e8',
         color: 'white',
@@ -73,8 +73,8 @@ const FloatingChatbot: React.FC = () => {
           position: fixed;
           bottom: 90px;
           right: 20px;
-          width: 380px;
-          height: 500px;
+          width: 340px;
+          height: 480px;
           max-width: calc(100vw - 40px);
           max-height: calc(100vh - 120px);
           background-color: white;
@@ -194,27 +194,30 @@ const FloatingChatbot: React.FC = () => {
           gap: 10px;
         `;
 
-        // Create textarea
-        const textarea = document.createElement('textarea');
-        textarea.placeholder = 'Ask a question about Physical AI & Humanoid Robotics...';
-        textarea.rows = 1;
+        // Create textarea (single-line input)
+        const textarea = document.createElement('input');
+        textarea.type = 'text';
+        textarea.placeholder = 'Ask a question...';
         textarea.style.cssText = `
           flex: 1;
-          padding: 10px;
+          padding: 10px 15px;
           border: 1px solid #ced4da;
           border-radius: 18px;
           resize: none;
           font-size: 14px;
           font-family: inherit;
           min-height: 40px;
-          max-height: 100px;
+          height: 40px;
+          max-height: 40px;
           outline: none;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         `;
 
-        // Auto-resize textarea
+        // Prevent textarea from resizing
         textarea.oninput = () => {
-          textarea.style.height = 'auto';
-          textarea.style.height = Math.min(textarea.scrollHeight, 100) + 'px';
+          // No auto-resize functionality - single line input only
         };
 
         // Create send button
@@ -269,7 +272,6 @@ const FloatingChatbot: React.FC = () => {
           // Add user message
           addMessage(message, 'user');
           textarea.value = '';
-          textarea.style.height = '40px';
 
           // Show loading indicator
           const loadingDiv = document.createElement('div');
@@ -336,7 +338,7 @@ const FloatingChatbot: React.FC = () => {
         sendButton.onclick = sendMessage;
 
         textarea.onkeypress = (e) => {
-          if (e.key === 'Enter' && !e.shiftKey) {
+          if (e.key === 'Enter') {
             e.preventDefault();
             sendMessage();
           }

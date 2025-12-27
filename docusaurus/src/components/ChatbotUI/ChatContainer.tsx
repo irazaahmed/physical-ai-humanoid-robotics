@@ -167,7 +167,7 @@ const ChatContainer: React.FC = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Ask a question about Physical AI & Humanoid Robotics..."
+            placeholder="Ask a question..."
             disabled={isLoading}
             rows={1}
             className="chat-input"
