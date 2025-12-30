@@ -17,7 +17,7 @@ load_dotenv()
 # Initialize FastAPI app
 app = FastAPI(
     title="Physical AI & Humanoid Robotics - Agent Service",
-    description="Google Gemini agent service providing reasoning capabilities over textbook content",
+    description="OpenRouter agent service providing reasoning capabilities over textbook content",
     version="1.0.0"
 )
 

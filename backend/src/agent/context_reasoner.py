@@ -1,7 +1,7 @@
 """
-Context Reasoner Layer - Uses Gemini to reason over fetched context
+Context Reasoner Layer - Uses OpenRouter to reason over fetched context
 """
-import google.generativeai as genai
+from .openrouter_client import OpenRouterClient
 from typing import List, Optional, NamedTuple
 from .context_fetcher import RetrievedChunk
 from .config import Config
@@ -18,41 +18,34 @@ class ReasoningResult(NamedTuple):
 
 
 class ContextReasoner:
-    """Layer responsible for reasoning over context using Gemini"""
+    """Layer responsible for reasoning over context using OpenRouter"""
 
     def __init__(self):
-        """Initialize the context reasoner with Gemini client"""
-        # Configure Gemini API
-        genai.configure(api_key=Config.GEMINI_API_KEY)
-        self.model = genai.GenerativeModel(
-            model_name=Config.GEMINI_MODEL,
-            system_instruction=self._get_system_instruction()
-        )
+        """Initialize the context reasoner with OpenRouter client"""
+        # Initialize OpenRouter client
+        self.client = OpenRouterClient()
 
     def _get_system_instruction(self) -> str:
         """
-        Get the system instruction for Gemini to ensure proper reasoning
+        Get the system instruction to ensure proper reasoning
 
         Returns:
-            System instruction string for Gemini
+            System instruction string
         """
         return """
-        You are an expert reasoning agent that analyzes textbook content to answer user questions.
+        You are an expert agent that answers user questions with strict adherence to the following policy:
 
         RULES:
-        1. ONLY use information provided in the context section to answer questions.
-        2. If the context does not contain sufficient information to answer the question, clearly state this.
-        3. Do NOT hallucinate or create facts not present in the provided context.
-        4. If you must use general knowledge, explicitly state that the information comes from general knowledge, not the textbook.
-        5. Maintain academic precision and cite specific details from the context when available.
-        6. If the context partially addresses the question, indicate this and clearly separate what's in the textbook vs. what you're inferring.
-        7. FIRST, determine if the textbook explicitly answers the user's question. Answer ONLY one of: YES / PARTIAL / NO
-        8. Then provide your answer based on the available context.
-
-        FORMAT YOUR RESPONSE AS:
-        - First, state whether the textbook content directly answers the question: YES / PARTIAL / NO
-        - Then provide the answer based strictly on the textbook content
-        - If textbook content is insufficient, clearly state this and optionally provide general knowledge with clear attribution
+        1. If textbook context is provided, answer ONLY using the textbook content - no exceptions.
+        2. If textbook context is provided, NEVER mention the textbook, sources, retrieval, chunks, embeddings, RAG, confidence scores, or backend logic.
+        3. If no textbook context is provided, use your general knowledge to answer the question naturally.
+        4. If no textbook context is provided, NEVER say phrases like "the textbook does not contain", "based on my knowledge", "I could not find", "RAG", "context", etc.
+        5. In ALL cases, provide ONLY the final answer in natural language - nothing else.
+        6. Do NOT expose any backend logic, retrieval results, similarity scores, thresholds, sources, or system behavior.
+        7. Do NOT show fallback messages or internal reasoning.
+        8. Do NOT apologize for missing content.
+        9. Do NOT mention OpenRouter, models, or APIs.
+        10. Answer naturally as a normal AI assistant would, regardless of whether you're using textbook content or general knowledge.
         """
 
     def reason_over_context(self, query: str, context_chunks: List[RetrievedChunk], verdict: str) -> ReasoningResult:
@@ -92,33 +85,39 @@ class ContextReasoner:
         formatted_context = self._format_context_for_model(context_chunks)
 
         # Create the prompt for the model using textbook content
-        prompt = f"""
-        USER QUERY: {query}
+        if formatted_context.strip():
+            # If context is available, answer using it without mentioning sources
+            prompt = f"""
+            SYSTEM INSTRUCTION: {self._get_system_instruction()}
 
-        TEXTBOOK CONTEXT:
-        {formatted_context if formatted_context.strip() else 'NO TEXTBOOK CONTENT FOUND'}
+            USER QUERY: {query}
 
-        Please provide a comprehensive answer to the user's query based ONLY on the provided textbook context.
-        If the textbook context does not contain sufficient information to fully answer the query,
-        state what information is available from the textbook and what might be missing.
-        """
+            TEXTBOOK CONTEXT:
+            {formatted_context}
+
+            Answer the user's query based ONLY on the provided textbook context, following the system instruction above.
+            Provide ONLY your final answer in natural language - nothing else.
+            """
+        else:
+            # If no context is available, we should not use this method, but if we do, fall back
+            prompt = f"""
+            SYSTEM INSTRUCTION: {self._get_system_instruction()}
+
+            USER QUERY: {query}
+
+            No textbook context was provided.
+
+            Answer the user's query using your general knowledge, following the system instruction above.
+            Provide ONLY your final answer in natural language - nothing else.
+            """
 
         try:
-            # Generate content using Gemini based on textbook context
-            response = self.model.generate_content(
+            # Generate content using OpenRouter based on textbook context
+            answer = self.client.generate_content(
                 prompt,
-                generation_config={
-                    "max_output_tokens": 2000,
-                    "temperature": 0.3,  # Lower temperature for more consistent, fact-based responses
-                }
+                max_tokens=2000,
+                temperature=0.3   # Lower temperature for more consistent, fact-based responses
             )
-
-            # Check if the response was blocked
-            if not response.candidates or response.candidates[0].finish_reason < 1:
-                raise Exception(f"Response generation was blocked or failed: {response.candidates[0].finish_reason if response.candidates else 'No candidates'}")
-
-            # Extract the generated content
-            answer = response.text
 
             # Calculate confidence based on similarity scores and context availability
             confidence_score = self._calculate_confidence(context_chunks, True)
@@ -139,7 +138,7 @@ class ContextReasoner:
             logger.error(f"Error during textbook reasoning: {str(e)}")
             # Check if this is a quota exceeded error
             error_str = str(e).lower()
-            if "quota" in error_str or "exceeded" in error_str or "rate limit" in error_str:
+            if "quota" in error_str or "exceeded" in error_str or "rate limit" in error_str or "rate" in error_str:
                 # Return a clean fallback message for quota errors
                 return ReasoningResult(
                     answer="I'm temporarily unable to answer right now. Please try again shortly.",
@@ -162,32 +161,25 @@ class ContextReasoner:
         Returns:
             ReasoningResult with answer from general knowledge
         """
-        # Create a prompt for general knowledge response
+        # Create a prompt for general knowledge response using the strict system instruction
         prompt = f"""
+        SYSTEM INSTRUCTION: {self._get_system_instruction()}
+
         USER QUERY: {query}
 
-        I don't have specific textbook content available to answer this query, but I can provide a general knowledge response based on my training data.
+        No textbook context was provided.
 
-        Please provide a clear, concise, and informative answer to the user's question.
-        Focus on accuracy and helpfulness without mentioning that textbook content was unavailable.
+        Answer the user's query using your general knowledge, following the system instruction above.
+        Provide ONLY your final answer in natural language - nothing else.
         """
 
         try:
-            # Generate content using Gemini based on general knowledge
-            response = self.model.generate_content(
+            # Generate content using OpenRouter based on general knowledge
+            answer = self.client.generate_content(
                 prompt,
-                generation_config={
-                    "max_output_tokens": 2000,
-                    "temperature": 0.4,  # Slightly higher for more creative responses when needed
-                }
+                max_tokens=2000,
+                temperature=0.4   # Slightly higher for more creative responses when needed
             )
-
-            # Check if the response was blocked
-            if not response.candidates or response.candidates[0].finish_reason < 1:
-                raise Exception(f"Response generation was blocked or failed: {response.candidates[0].finish_reason if response.candidates else 'No candidates'}")
-
-            # Extract the generated content
-            answer = response.text
 
             # Calculate low confidence since this is general knowledge
             confidence_score = 0.2  # Lower confidence for general knowledge responses
@@ -208,7 +200,7 @@ class ContextReasoner:
             logger.error(f"Error during general knowledge reasoning: {str(e)}")
             # Check if this is a quota exceeded error
             error_str = str(e).lower()
-            if "quota" in error_str or "exceeded" in error_str or "rate limit" in error_str:
+            if "quota" in error_str or "exceeded" in error_str or "rate limit" in error_str or "rate" in error_str:
                 # Return a clean fallback message for quota errors
                 return ReasoningResult(
                     answer="I'm temporarily unable to answer right now. Please try again shortly.",
@@ -225,12 +217,12 @@ class ContextReasoner:
                     reasoning_notes=f"Error occurred during reasoning: {str(e)}"
                 )
 
-    def _extract_gemini_verdict(self, answer: str) -> str:
+    def _extract_model_verdict(self, answer: str) -> str:
         """
-        Extract the verdict from Gemini's response.
+        Extract the verdict from the model's response.
 
         Args:
-            answer: The full answer from Gemini
+            answer: The full answer from the model
 
         Returns:
             Verdict string: "YES", "PARTIAL", or "NO"
@@ -249,7 +241,7 @@ class ContextReasoner:
 
     def _format_context_for_model(self, context_chunks: List[RetrievedChunk]) -> str:
         """
-        Format the context chunks for the Gemini model
+        Format the context chunks for the model
 
         Args:
             context_chunks: List of retrieved context chunks

@@ -9,7 +9,7 @@ interface Message {
 
 // Configuration for the chatbot API
 const CHATBOT_CONFIG = {
-  API_BASE_URL: process.env.REACT_APP_CHATBOT_API_URL || 'http://localhost:8001/api/v1',
+  API_BASE_URL: process.env.REACT_APP_CHATBOT_API_URL || 'http://localhost:8000/api/v1',
   CHAT_ENDPOINT: '/chat',
   TIMEOUT_MS: 30000, // 30 seconds
   SESSION_PREFIX: 'web-session-'

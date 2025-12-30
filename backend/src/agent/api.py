@@ -4,7 +4,7 @@ API routes for the agent service.
 This module defines the FastAPI routes for the agent service,
 following the contracts specified in api-contracts.md.
 
-The agent service provides intelligent query processing capabilities using Google Gemini
+The agent service provides intelligent query processing capabilities using OpenRouter
 to perform reasoning and information retrieval from the textbook content.
 
 API Endpoints:
@@ -42,7 +42,7 @@ router = APIRouter()
 
 @router.post("/query", response_model=QueryResponse)
 @apply_rate_limit()
-async def query_endpoint(request: Request, query_request: QueryRequest = Depends()):
+async def query_endpoint(request: Request, query_request: QueryRequest):
     """
     Process a direct information query and return structured results.
     POST /api/v1/query
@@ -117,8 +117,8 @@ async def query_endpoint(request: Request, query_request: QueryRequest = Depends
         # Get the agent instance
         agent = get_agent()
 
-        # Process the query using the agent's simple processing function
-        response = agent.process_simple_query(query_request.query)
+        # Process the query using the agent's simple processing function with parameters
+        response = agent.process_simple_query_with_parameters(query_request.query, query_request.parameters)
 
         # Cache the response
         query_cache.set(query_request.query, session_id, response)
@@ -184,7 +184,7 @@ async def query_endpoint(request: Request, query_request: QueryRequest = Depends
 
 @router.post("/chat", response_model=ChatResponse)
 @apply_rate_limit()
-async def chat_endpoint(request: Request, chat_request: ChatRequest = Depends()):
+async def chat_endpoint(request: Request, chat_request: ChatRequest):
     """
     Process a conversational query and return a synthesized response.
     POST /api/v1/chat
@@ -234,8 +234,8 @@ async def chat_endpoint(request: Request, chat_request: ChatRequest = Depends())
         # Get the agent instance
         agent = get_agent()
 
-        # Process the query using the agent
-        response = agent.process_query(chat_request.query, session_id)
+        # Process the query using the agent with parameters from the request
+        response = agent.process_query_with_parameters(chat_request.query, session_id, chat_request.parameters)
 
         # Cache the response
         query_cache.set(chat_request.query, session_id, response)
@@ -281,18 +281,18 @@ async def health_endpoint():
     try:
         # Check dependencies
         dependencies_status = {
-            "gemini_api": "checking",
+            "openrouter_api": "checking",
             "qdrant_connection": "checking",
             "retrieval_pipeline": "checking"
         }
 
-        # Check Google Gemini API
+        # Check OpenRouter API
         try:
             agent = get_agent()
-            dependencies_status["gemini_api"] = "connected"
+            dependencies_status["openrouter_api"] = "connected"
         except Exception:
-            dependencies_status["gemini_api"] = "disconnected"
-        
+            dependencies_status["openrouter_api"] = "disconnected"
+
         # Check retrieval pipeline
         try:
             from .retrieval_tool import RetrievalTool
@@ -300,7 +300,7 @@ async def health_endpoint():
             dependencies_status["retrieval_pipeline"] = "available"
         except Exception:
             dependencies_status["retrieval_pipeline"] = "unavailable"
-        
+
         # Note: Qdrant connection is checked during retrieval tool initialization
         
         # Determine overall health status
@@ -331,7 +331,7 @@ async def health_endpoint():
             status=HealthStatus.UNHEALTHY,
             timestamp=datetime.utcnow(),
             dependencies={
-                "gemini_api": "error",
+                "openrouter_api": "error",
                 "qdrant_connection": "error",
                 "retrieval_pipeline": "error"
             },

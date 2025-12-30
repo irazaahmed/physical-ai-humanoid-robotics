@@ -64,20 +64,32 @@ def validate_threshold(threshold: float) -> bool:
 def validate_session_id(session_id: str) -> bool:
     """
     Validate the session ID format.
-    
+
     Args:
         session_id: The session identifier to validate
-        
+
     Returns:
         bool: True if valid, False otherwise
     """
     if not session_id:
         return True  # Session ID is optional
-    
-    # Basic UUID format validation (just length and characters)
+
     import re
+
+    # Check for UUID format (for manually provided session IDs)
     uuid_pattern = re.compile(r'^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$', re.I)
-    return bool(uuid_pattern.match(session_id))
+    if uuid_pattern.match(session_id):
+        return True
+
+    # Check for "session_" prefix format (for auto-generated session IDs)
+    session_pattern = re.compile(r'^session_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$', re.I)
+    if session_pattern.match(session_id):
+        return True
+
+    # Check for reasonable alphanumeric session IDs (like "browser-test", "user123", etc.)
+    # Allow letters, numbers, hyphens, and underscores, with reasonable length
+    alphanumeric_pattern = re.compile(r'^[a-zA-Z0-9_-]{1,64}$')
+    return bool(alphanumeric_pattern.match(session_id))
 
 
 def validate_retrieved_chunks(chunks: List[RetrievedChunk]) -> bool:
@@ -157,27 +169,27 @@ def validate_query_request(request: QueryRequest) -> Dict[str, Any]:
 def validate_chat_request(request: ChatRequest) -> Dict[str, Any]:
     """
     Validate a chat request and return any errors.
-    
+
     Args:
         request: The chat request to validate
-        
+
     Returns:
         Dict with validation results - empty if valid
     """
     errors = {}
-    
+
     if not validate_query_text(request.query):
         errors['query'] = "Query must be between 3 and 10000 characters"
-    
+
     if not validate_session_id(request.session_id):
         errors['session_id'] = "Session ID must be a valid UUID format"
-    
+
     if not validate_top_k(request.parameters.top_k):
         errors['top_k'] = "Top-k parameter must be between 1 and 50"
-    
+
     if not validate_threshold(request.parameters.threshold):
         errors['threshold'] = "Threshold parameter must be between 0.0 and 1.0"
-    
+
     return errors
 
 

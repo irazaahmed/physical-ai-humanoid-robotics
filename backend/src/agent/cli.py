@@ -3,7 +3,7 @@ Terminal-based CLI interface for the RAG agent.
 
 This module provides a command-line interface that implements the three-layer architecture:
 1) FETCH LAYER - Retrieves context from Qdrant
-2) REASONING LAYER - Uses Gemini to reason over context
+2) REASONING LAYER - Uses OpenRouter to reason over context
 3) TERMINAL OUTPUT LAYER - Formats and displays results
 """
 import sys
@@ -195,9 +195,9 @@ Example usage:
         # Store fetch_time in a variable accessible in both modes
         total_fetch_time = fetch_time
 
-        # LAYER 2: REASONING LAYER - Use Gemini to reason over context
+        # LAYER 2: REASONING LAYER - Use OpenRouter to reason over context
         if debug_mode:
-            print("2) REASONING LAYER: Processing with Gemini model...")
+            print("2) REASONING LAYER: Processing with OpenRouter model...")
         reasoning_start_time = time.time()
         context_reasoner = ContextReasoner()
 

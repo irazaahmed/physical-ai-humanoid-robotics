@@ -12,7 +12,7 @@
    pip install -r requirements.txt
    ```
 
-3. Start the agent service on port 8001:
+3. Start the agent service on port 8000:
    ```bash
    START_AGENT_SERVICE=true python -m src.main
    ```
@@ -23,7 +23,7 @@
    python -m src.main
    ```
 
-The backend service will start on port 8001 with the `/api/v1/chat` endpoint available.
+The backend service will start on port 8000 with the `/api/v1/chat` endpoint available.
 
 ## Frontend Setup
 
@@ -37,10 +37,10 @@ The backend service will start on port 8001 with the `/api/v1/chat` endpoint ava
    npm install
    ```
 
-3. Set the API URL for the chatbot (optional - defaults to localhost:8001):
+3. Set the API URL for the chatbot (optional - defaults to localhost:8000):
    ```bash
    # Create a .env file in the docusaurus directory
-   echo "REACT_APP_CHATBOT_API_URL=http://localhost:8001/api/v1" > .env
+   echo "REACT_APP_CHATBOT_API_URL=http://localhost:8000/api/v1" > .env
    ```
 
 4. Start the Docusaurus development server:
@@ -54,7 +54,7 @@ For production deployment, ensure the backend API is accessible from your fronte
 
 ## Troubleshooting
 
-- If the chatbot doesn't appear, ensure the backend service is running on port 8001
+- If the chatbot doesn't appear, ensure the backend service is running on port 8000
 - Check browser console for CORS errors
 - Verify that the GEMINI_API_KEY is properly configured in the backend .env file
 - Make sure the agent service starts with `START_AGENT_SERVICE=true`

@@ -17,9 +17,9 @@ class Config:
     Configuration class for the agent service.
     """
 
-    # Google Gemini Configuration
-    GEMINI_API_KEY: Optional[str] = os.getenv("GEMINI_API_KEY")
-    GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-pro")  # Using gemini-pro as the default
+    # OpenRouter Configuration
+    OPENROUTER_API_KEY: Optional[str] = os.getenv("OPENROUTER_API_KEY")
+    OPENROUTER_MODEL: str = os.getenv("OPENROUTER_MODEL", "openai/gpt-3.5-turbo")  # Using a default model
 
     # Rate Limiting Configuration
     RATE_LIMIT: str = os.getenv("RATE_LIMIT", "10/minute")  # 10 requests per minute per IP
@@ -41,5 +41,5 @@ class Config:
         Raises:
             ValueError: If any required configuration is missing
         """
-        if not cls.GEMINI_API_KEY:
-            raise ValueError("GEMINI_API_KEY environment variable is required")
+        if not cls.OPENROUTER_API_KEY:
+            raise ValueError("OPENROUTER_API_KEY environment variable is required")

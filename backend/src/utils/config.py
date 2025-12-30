@@ -8,9 +8,9 @@ load_dotenv()
 class Config:
     """Configuration class to manage environment variables and settings"""
 
-    # Google Gemini configuration
-    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-    GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    # OpenRouter configuration
+    OPENROUTER_API_KEY: str = os.getenv("OPENROUTER_API_KEY", "")
+    OPENROUTER_MODEL: str = os.getenv("OPENROUTER_MODEL", "openai/gpt-3.5-turbo")
 
     # Cohere configuration
     COHERE_API_KEY: str = os.getenv("COHERE_API_KEY", "")
@@ -37,8 +37,8 @@ class Config:
     def validate(cls) -> list[str]:
         """Validate that all required environment variables are set"""
         errors = []
-        if not cls.GEMINI_API_KEY:
-            errors.append("GEMINI_API_KEY is not set")
+        if not cls.OPENROUTER_API_KEY:
+            errors.append("OPENROUTER_API_KEY is not set")
         if not cls.COHERE_API_KEY:
             errors.append("COHERE_API_KEY is not set")
         if not cls.QDRANT_API_KEY:

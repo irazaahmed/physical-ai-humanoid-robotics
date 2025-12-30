@@ -186,6 +186,6 @@ def handle_error(error: Exception, context: str = "") -> Any:
     # Return an error response appropriate to the context
     return {
         "error": "An error occurred while processing your request",
-        "message": str(error) if Config.GEMINI_API_KEY else "Configuration error",
+        "message": str(error) if Config.OPENROUTER_API_KEY else "Configuration error",
         "timestamp": datetime.utcnow().isoformat()
     }
