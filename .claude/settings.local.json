@@ -27,7 +27,8 @@
       "Bash(npx docusaurus build)",
       "Bash(curl -I \"http://localhost:3006/docs/module1/intro\")",
       "Bash(curl -I http://localhost:3007/)",
-      "Bash(curl -I http://localhost:3008/)"
+      "Bash(curl -I http://localhost:3008/)",
+      "Bash(dir \"D:\\\\Code\\\\GIAIC\\\\Quarter-4-hackathons\\\\physical-ai-and-humanoid-robotics\\\\history\\\\prompts\\\\project-2-rag-chatbot\"\")"
     ]
   }
 }

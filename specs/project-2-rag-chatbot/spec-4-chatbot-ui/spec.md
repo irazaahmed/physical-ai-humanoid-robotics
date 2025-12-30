@@ -42,11 +42,11 @@ Input expectations include natural language questions about physical AI and huma
 
 ## 4) Backend Integration Contract
 
-The UI integrates with the existing RAG backend through well-defined API endpoints, respecting the backend's "book-first + Gemini fallback" behavior that has been implemented in the agent layer. The UI must not replicate any backend logic but instead rely entirely on the backend services:
+The UI integrates with the existing RAG backend through well-defined API endpoints, respecting the backend's "book-first + LLM fallback" behavior that has been implemented in the agent layer. The UI must not replicate any backend logic but instead rely entirely on the backend services:
 
 - The UI sends user queries to the agent layer API endpoint (e.g., POST /chat)
 - The backend handles the full RAG process: query understanding, retrieval from textbook content, and response generation
-- If textbook content is insufficient, the backend applies Gemini fallback logic as designed
+- If textbook content is insufficient, the backend applies LLM fallback logic as designed
 - The UI receives only the final synthesized response from the backend
 - All complex processing, including retrieval, reasoning, and content synthesis, remains in the backend
 - The UI is responsible only for presentation and user interaction management
@@ -101,7 +101,7 @@ The UI follows strict presentation rules to ensure clarity and safety:
 - [ ] Responses are displayed in a clear, readable format without technical metadata
 - [ ] The chat interface shows a clear distinction between user and system messages
 - [ ] Conversation history is maintained within the current session
-- [ ] The UI properly handles the book-first + Gemini fallback behavior from the backend
+- [ ] The UI properly handles the book-first + LLM fallback behavior from the backend
 
 ### Non-Functional Acceptance
 - [ ] The UI provides immediate feedback when messages are being processed

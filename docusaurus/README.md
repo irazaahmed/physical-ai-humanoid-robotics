@@ -42,7 +42,7 @@ This command generates static content into the `build` directory and can be serv
 
 ## AI Chatbot Integration
 
-This textbook includes an AI chatbot powered by Google Gemini 2.5 Flash that appears on every page as a floating icon at the bottom-right. The chatbot can answer questions about the textbook content.
+This textbook includes an AI chatbot powered by OpenRouter that appears on every page as a floating icon at the bottom-right. The chatbot can answer questions about the textbook content using RAG (Retrieval-Augmented Generation) to provide accurate responses based on the textbook materials.
 
 ### Backend Setup
 

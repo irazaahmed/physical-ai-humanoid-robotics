@@ -22,7 +22,7 @@
 **Alternatives considered**:
 - OpenAI embeddings: Available and high quality but not specified in requirements
 - Hugging Face models: Self-hostable but would add complexity
-- Google embeddings: Another viable option but Cohere was specified
+- OpenRouter: Another viable option but Cohere was specified
 
 ## Decision: Vector Database
 **Rationale**: Qdrant Cloud was specified in the requirements and constitution. It provides managed vector storage with good Python client support and scalability.

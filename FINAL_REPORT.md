@@ -4,7 +4,7 @@
 
 The Physical AI & Humanoid Robotics project is an AI-native textbook platform that successfully combines educational content on robotics with an AI-powered chatbot using RAG (Retrieval Augmented Generation) technology. The project covers four comprehensive modules: ROS 2 fundamentals, Digital Twins (Gazebo & Unity), NVIDIA Isaac AI Robot Brain, and Vision-Language-Action Capstone Humanoid systems.
 
-The platform implements a sophisticated architecture with a Docusaurus frontend textbook, FastAPI backend services, Google Gemini for reasoning, Cohere for embeddings, and Qdrant for vector storage. The system provides an intelligent chatbot that can answer questions about the textbook content with proper citations and context.
+The platform implements a sophisticated architecture with a Docusaurus frontend textbook, FastAPI backend services, OpenRouter for reasoning, Cohere for embeddings, and Qdrant for vector storage. The system provides an intelligent chatbot that can answer questions about the textbook content with proper citations and context.
 
 ## Completed Changes List
 

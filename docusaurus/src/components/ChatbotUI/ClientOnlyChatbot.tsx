@@ -9,7 +9,10 @@ interface Message {
 
 // Configuration for the chatbot API - using browser-safe approach
 const CHATBOT_CONFIG = {
-  API_BASE_URL: 'http://localhost:8000/api/v1', // Default API URL
+  API_BASE_URL: process.env.REACT_APP_CHATBOT_API_URL ||
+               (typeof window !== 'undefined' && window.location.hostname === 'localhost'
+                 ? 'http://localhost:8000/api/v1'
+                 : '/api/v1'), // Use relative path for production to call the same domain
   CHAT_ENDPOINT: '/chat',
   TIMEOUT_MS: 30000, // 30 seconds
   SESSION_PREFIX: 'web-session-'

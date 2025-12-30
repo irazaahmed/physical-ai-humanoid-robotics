@@ -37,7 +37,7 @@ This implementation fulfills Spec-4: Chatbot UI for AI-Native Textbook (Project-
 
 ## Constraints and Assumptions
 - Backend API endpoint at `/api/chat` follows the expected contract
-- Backend handles the "book-first + Gemini fallback" behavior
+- Backend handles the "book-first + LLM fallback" behavior
 - UI only displays final answer text without technical metadata
 - All conversation history is maintained in-session only (client-side)
 - No authentication required for this implementation phase

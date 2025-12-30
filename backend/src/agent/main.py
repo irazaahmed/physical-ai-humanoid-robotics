@@ -8,11 +8,8 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi.errors import RateLimitExceeded
 import os
-from dotenv import load_dotenv
+from src.agent.config import Config
 from src.agent.rate_limiter import setup_rate_limiter
-
-# Load environment variables
-load_dotenv()
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -22,9 +19,30 @@ app = FastAPI(
 )
 
 # Add CORS middleware to allow requests from the frontend
+# In production, only allow the specific Netlify frontend domain
+FRONTEND_URL = os.getenv("FRONTEND_URL", "https://physical-ai-humanoid-robotics-ar.netlify.app")
+IS_PRODUCTION = os.getenv("VERCEL_ENV") is not None or os.getenv("ENVIRONMENT") == "production"
+
+if IS_PRODUCTION:
+    # Production: Only allow the Netlify frontend
+    allow_origins = [FRONTEND_URL]
+else:
+    # Development: Allow localhost for testing
+    allow_origins = [
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "http://localhost:8000",
+        "http://localhost:8080",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:3001",
+        "http://127.0.0.1:8000",
+        "http://127.0.0.1:8080",
+        FRONTEND_URL  # Include the production URL for consistency
+    ]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with specific frontend URLs
+    allow_origins=allow_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

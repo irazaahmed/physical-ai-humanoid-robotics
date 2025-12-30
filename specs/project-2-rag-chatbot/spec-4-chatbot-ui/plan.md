@@ -7,7 +7,7 @@
 
 ## Plan Objective
 
-This plan aims to execute the implementation of the Chatbot UI as specified in Spec-4. The plan focuses on creating a thin presentation layer that connects users with the existing RAG backend system while maintaining clear separation of concerns. The UI will provide a chat-style interface for users to interact with the textbook content through the agent layer, ensuring that all complex processing remains in the backend services. This implementation will respect the "book-first + Gemini fallback" behavior already implemented in the agent layer.
+This plan aims to execute the implementation of the Chatbot UI as specified in Spec-4. The plan focuses on creating a thin presentation layer that connects users with the existing RAG backend system while maintaining clear separation of concerns. The UI will provide a chat-style interface for users to interact with the textbook content through the agent layer, ensuring that all complex processing remains in the backend services. This implementation will respect the "book-first + LLM fallback" behavior already implemented in the agent layer.
 
 ## High-Level Execution Phases
 
@@ -46,7 +46,7 @@ This plan aims to execute the implementation of the Chatbot UI as specified in S
 ### Dependencies on Spec-3 Agent Layer:
 - **Agent Layer API Endpoints**: The UI depends on the `/chat` endpoint from the agent layer
 - **Response Format**: The UI expects responses in the format defined by the agent layer
-- **"Book-first + Gemini fallback" behavior**: The UI must respect but not implement this behavior
+- **"Book-first + LLM fallback" behavior**: The UI must respect but not implement this behavior
 
 ### Dependencies on Existing RAG Chatbot API Behavior:
 - **API Contract Compliance**: The UI must follow the established API contracts from Spec-2 and Spec-3
@@ -66,9 +66,9 @@ This plan aims to execute the implementation of the Chatbot UI as specified in S
 - Responses will be received as complete, formatted answers ready for display
 - The UI will extract only the final answer text from the response payload
 
-### How "book-first + Gemini fallback" is respected without UI logic:
+### How "book-first + LLM fallback" is respected without UI logic:
 - The UI sends queries to the backend without needing to know the internal processing
-- The backend handles all decision-making regarding book-first retrieval vs. Gemini fallback
+- The backend handles all decision-making regarding book-first retrieval vs. LLM fallback
 - The UI receives responses that have already been processed through the complete pipeline
 - No logic about which source was used will be present in the UI layer
 
@@ -125,5 +125,5 @@ This plan aims to execute the implementation of the Chatbot UI as specified in S
 ### Compliance Verification:
 - The plan explicitly acknowledges that no backend logic will be implemented in the UI
 - All complex processing remains in backend services as required by the specification
-- The UI will respect but not replicate the "book-first + Gemini fallback" behavior
+- The UI will respect but not replicate the "book-first + LLM fallback" behavior
 - The backend remains the source of truth for all content and processing

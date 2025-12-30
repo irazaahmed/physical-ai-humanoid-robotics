@@ -83,7 +83,7 @@ The specification MUST include the following sections:
 
 4) Backend Integration Contract
    - How the UI interacts with the existing RAG backend
-   - Book-first + Gemini fallback behavior (already implemented backend logic)
+   - Book-first + LLM fallback behavior (already implemented backend logic)
    - UI must NOT replicate backend logic
 
 5) Answer Presentation Rules

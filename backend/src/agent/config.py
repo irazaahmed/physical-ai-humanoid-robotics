@@ -6,10 +6,11 @@ including API keys and service parameters.
 """
 import os
 from typing import Optional
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Only load .env file in development environments
+if os.getenv("VERCEL_ENV") is None and os.getenv("ENVIRONMENT") != "production":
+    from dotenv import load_dotenv
+    load_dotenv()
 
 
 class Config:
@@ -20,6 +21,13 @@ class Config:
     # OpenRouter Configuration
     OPENROUTER_API_KEY: Optional[str] = os.getenv("OPENROUTER_API_KEY")
     OPENROUTER_MODEL: str = os.getenv("OPENROUTER_MODEL", "openai/gpt-3.5-turbo")  # Using a default model
+
+    # Qdrant Configuration
+    QDRANT_URL: str = os.getenv("QDRANT_URL", "http://localhost:6333")
+    QDRANT_API_KEY: Optional[str] = os.getenv("QDRANT_API_KEY")
+
+    # Cohere Configuration
+    COHERE_API_KEY: Optional[str] = os.getenv("COHERE_API_KEY")
 
     # Rate Limiting Configuration
     RATE_LIMIT: str = os.getenv("RATE_LIMIT", "10/minute")  # 10 requests per minute per IP
@@ -34,12 +42,19 @@ class Config:
 
     # Validation
     @classmethod
-    def validate(cls) -> None:
+    def validate(cls) -> list:
         """
         Validate that all required configuration values are present.
 
-        Raises:
-            ValueError: If any required configuration is missing
+        Returns:
+            List of validation errors if any
         """
+        errors = []
         if not cls.OPENROUTER_API_KEY:
-            raise ValueError("OPENROUTER_API_KEY environment variable is required")
+            errors.append("OPENROUTER_API_KEY environment variable is required")
+        if not cls.QDRANT_URL:
+            errors.append("QDRANT_URL environment variable is required")
+        if not cls.COHERE_API_KEY:
+            errors.append("COHERE_API_KEY environment variable is required")
+
+        return errors

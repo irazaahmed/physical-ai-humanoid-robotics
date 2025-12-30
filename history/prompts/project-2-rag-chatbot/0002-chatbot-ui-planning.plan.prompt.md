@@ -89,7 +89,7 @@ Include the following sections:
 
 4) Integration Strategy
    - How the UI will consume chatbot responses
-   - How "book-first + Gemini fallback" is respected without UI logic
+   - How "book-first + LLM fallback" is respected without UI logic
 
 5) Validation Strategy
    - How correctness will be validated at UI level

@@ -1455,3 +1455,26 @@ NoneType: None
 2025-12-30 07:56:49,435 - retrieval_pipeline - INFO - All retrieval results passed validation checks
 2025-12-30 07:56:49,435 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
 2025-12-30 07:56:49,436 - retrieval_pipeline - INFO - Retrieval completed in 0.83ms, found 0 results
+2025-12-30 13:36:45,263 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-30 13:36:45,658 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-30 13:36:45,659 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-30 13:36:45,661 - retrieval_pipeline - INFO - Starting retrieval for query: 'hello' with k=3, threshold=0.5
+2025-12-30 13:36:45,662 - retrieval_pipeline - INFO - Preprocessed query: 'hello' (original length: 5, processed length: 5)
+2025-12-30 13:36:45,952 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-30 13:36:45,953 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-30 13:36:45,954 - retrieval_pipeline - INFO - Starting similarity search with k=3, threshold=0.5
+2025-12-30 13:36:46,114 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-30 13:36:46,115 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-30 13:36:46,116 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-30 13:36:46,117 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.5
+2025-12-30 13:36:46,118 - retrieval_pipeline - INFO - Retrieval completed in 0.46ms, found 0 results
+2025-12-30 13:37:19,698 - retrieval_pipeline - INFO - Starting retrieval for query: 'what is Physical AI & Humanoid Robotics' with k=5, threshold=0.6
+2025-12-30 13:37:19,699 - retrieval_pipeline - INFO - Preprocessed query: 'what is Physical AI & Humanoid Robotics' (original length: 39, processed length: 39)
+2025-12-30 13:37:20,023 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-30 13:37:20,024 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-30 13:37:20,024 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-30 13:37:20,429 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-30 13:37:20,429 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-30 13:37:20,430 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-30 13:37:20,431 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-30 13:37:20,431 - retrieval_pipeline - INFO - Retrieval completed in 0.73ms, found 0 results

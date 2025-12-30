@@ -56,5 +56,5 @@ For production deployment, ensure the backend API is accessible from your fronte
 
 - If the chatbot doesn't appear, ensure the backend service is running on port 8000
 - Check browser console for CORS errors
-- Verify that the GEMINI_API_KEY is properly configured in the backend .env file
+- Verify that the OPENROUTER_API_KEY is properly configured in the backend .env file
 - Make sure the agent service starts with `START_AGENT_SERVICE=true`
