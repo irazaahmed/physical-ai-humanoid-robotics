@@ -1,6 +1,23 @@
 {
   "version": 2,
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.11"
+    }
+  },
   "routes": [
+    {
+      "src": "/api/v1/(.*)",
+      "dest": "/api/index.py"
+    },
+    {
+      "src": "/api/docs",
+      "dest": "/api/index.py"
+    },
+    {
+      "src": "/api/openapi.json",
+      "dest": "/api/index.py"
+    },
     {
       "src": "/(.*)",
       "dest": "/api/index.py"
