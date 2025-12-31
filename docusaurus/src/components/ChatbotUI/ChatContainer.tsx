@@ -11,10 +11,12 @@ interface Message {
 // Configuration for the chatbot API
 const CHATBOT_CONFIG = {
   // API endpoint configuration - defaults to localhost but can be overridden
-  API_BASE_URL: process.env.REACT_APP_CHATBOT_API_URL ||
-               (typeof window !== 'undefined' && window.location.hostname === 'localhost'
-                 ? 'http://localhost:8000/api/v1'
-                 : '/api/v1'), // Use relative path for production to call the same domain
+  API_BASE_URL:
+    typeof process !== 'undefined' && process.env?.REACT_APP_CHATBOT_API_URL
+      ? process.env.REACT_APP_CHATBOT_API_URL
+      : (typeof window !== 'undefined' && window.location.hostname === 'localhost'
+        ? 'http://localhost:8000/api/v1'
+        : '/api/v1'), // Use relative path for production to call the same domain
   CHAT_ENDPOINT: '/chat',
   TIMEOUT_MS: 30000, // 30 seconds
   MAX_RETRIES: 3,

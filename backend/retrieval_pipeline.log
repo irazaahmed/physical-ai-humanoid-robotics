@@ -1478,3 +1478,26 @@ NoneType: None
 2025-12-30 13:37:20,430 - retrieval_pipeline - INFO - All retrieval results passed validation checks
 2025-12-30 13:37:20,431 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
 2025-12-30 13:37:20,431 - retrieval_pipeline - INFO - Retrieval completed in 0.73ms, found 0 results
+2025-12-30 17:02:33,658 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-30 17:02:34,096 - retrieval_pipeline - INFO - Successfully validated Qdrant Cloud connection
+2025-12-30 17:02:34,097 - retrieval_pipeline - INFO - Retrieval pipeline setup completed successfully
+2025-12-30 17:02:34,097 - retrieval_pipeline - INFO - Starting retrieval for query: 'Introduction to ROS 2' with k=5, threshold=0.5
+2025-12-30 17:02:34,098 - retrieval_pipeline - INFO - Preprocessed query: 'Introduction to ROS 2' (original length: 21, processed length: 21)
+2025-12-30 17:02:34,391 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-30 17:02:34,392 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-30 17:02:34,392 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.5
+2025-12-30 17:02:34,554 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-30 17:02:34,554 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-30 17:02:34,554 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-30 17:02:34,555 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.5
+2025-12-30 17:02:34,555 - retrieval_pipeline - INFO - Retrieval completed in 0.46ms, found 0 results
+2025-12-30 17:03:01,518 - retrieval_pipeline - INFO - Starting retrieval for query: 'Introduction to Digital Twin Concepts in Robotics' with k=5, threshold=0.6
+2025-12-30 17:03:01,518 - retrieval_pipeline - INFO - Preprocessed query: 'Introduction to Digital Twin Concepts in Robotics' (original length: 49, processed length: 49)
+2025-12-30 17:03:01,899 - retrieval_pipeline - INFO - Successfully generated embeddings for 1 query texts (dimension: 1024)
+2025-12-30 17:03:01,900 - retrieval_pipeline - INFO - Successfully generated embedding for query (size: 1024)
+2025-12-30 17:03:01,900 - retrieval_pipeline - INFO - Starting similarity search with k=5, threshold=0.6
+2025-12-30 17:03:02,358 - retrieval_pipeline - INFO - Search completed successfully, returned 0 chunks from collection: textbook_embeddings
+2025-12-30 17:03:02,358 - retrieval_pipeline - INFO - Ranked 0 chunks by similarity score and diversity
+2025-12-30 17:03:02,358 - retrieval_pipeline - INFO - All retrieval results passed validation checks
+2025-12-30 17:03:02,359 - retrieval_pipeline - WARNING - No relevant results found for query with threshold 0.6
+2025-12-30 17:03:02,359 - retrieval_pipeline - INFO - Retrieval completed in 0.84ms, found 0 results
